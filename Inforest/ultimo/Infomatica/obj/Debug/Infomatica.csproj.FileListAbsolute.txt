@@ -1,0 +1,6 @@
+C:\Users\practicante4\Desktop\INFOREST\Infomatica\bin\Debug\Infomatica.dll
+C:\Users\practicante4\Desktop\INFOREST\Infomatica\bin\Debug\Infomatica.pdb
+C:\Users\practicante4\Desktop\INFOREST\Infomatica\obj\Debug\Infomatica.csprojAssemblyReference.cache
+C:\Users\practicante4\Desktop\INFOREST\Infomatica\obj\Debug\Infomatica.csproj.CoreCompileInputs.cache
+C:\Users\practicante4\Desktop\INFOREST\Infomatica\obj\Debug\Infomatica.dll
+C:\Users\practicante4\Desktop\INFOREST\Infomatica\obj\Debug\Infomatica.pdb
