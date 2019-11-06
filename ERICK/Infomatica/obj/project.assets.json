@@ -235,11 +235,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ERICK\\Desktop\\ERICK\\Infomatica\\Infomatica.csproj",
+      "projectUniqueName": "D:\\DESARROLLO\\ERICK\\Infomatica\\Infomatica.csproj",
       "projectName": "Infomatica",
-      "projectPath": "C:\\Users\\ERICK\\Desktop\\ERICK\\Infomatica\\Infomatica.csproj",
+      "projectPath": "D:\\DESARROLLO\\ERICK\\Infomatica\\Infomatica.csproj",
       "packagesPath": "C:\\Users\\ERICK\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ERICK\\Desktop\\ERICK\\Infomatica\\obj\\",
+      "outputPath": "D:\\DESARROLLO\\ERICK\\Infomatica\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\",

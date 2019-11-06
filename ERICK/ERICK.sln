@@ -11,7 +11,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PRUEBA2", "PRUEBA2\PRUEBA2.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InfoBack.Android", "InfoBack\InfoBack.Android\InfoBack.Android.csproj", "{08314C0F-C22A-4085-BCB0-ECE757D5DC86}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InfoBack", "InfoBack\InfoBack\InfoBack.csproj", "{6F9744E0-664F-4BF6-ABC2-E176B3BA7147}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InfoBack", "InfoBack\InfoBack\InfoBack.csproj", "{6F9744E0-664F-4BF6-ABC2-E176B3BA7147}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InfoService", "InfoService\InfoService.csproj", "{338A8094-E8EA-4939-B370-E906885F59EB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -41,6 +43,10 @@ Global
 		{6F9744E0-664F-4BF6-ABC2-E176B3BA7147}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6F9744E0-664F-4BF6-ABC2-E176B3BA7147}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6F9744E0-664F-4BF6-ABC2-E176B3BA7147}.Release|Any CPU.Build.0 = Release|Any CPU
+		{338A8094-E8EA-4939-B370-E906885F59EB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{338A8094-E8EA-4939-B370-E906885F59EB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{338A8094-E8EA-4939-B370-E906885F59EB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{338A8094-E8EA-4939-B370-E906885F59EB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

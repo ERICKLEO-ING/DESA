@@ -695,11 +695,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ERICK\\Desktop\\ERICK\\InfoBack\\InfoBack\\InfoBack.csproj",
+      "projectUniqueName": "D:\\DESARROLLO\\ERICK\\InfoBack\\InfoBack\\InfoBack.csproj",
       "projectName": "InfoBack",
-      "projectPath": "C:\\Users\\ERICK\\Desktop\\ERICK\\InfoBack\\InfoBack\\InfoBack.csproj",
+      "projectPath": "D:\\DESARROLLO\\ERICK\\InfoBack\\InfoBack\\InfoBack.csproj",
       "packagesPath": "C:\\Users\\ERICK\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ERICK\\Desktop\\ERICK\\InfoBack\\InfoBack\\obj\\",
+      "outputPath": "D:\\DESARROLLO\\ERICK\\InfoBack\\InfoBack\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\",

@@ -1,0 +1,10 @@
+D:\DESARROLLO\ERICK\InfoService\bin\Debug\InfoService.exe.config
+D:\DESARROLLO\ERICK\InfoService\bin\Debug\InfoService.exe
+D:\DESARROLLO\ERICK\InfoService\bin\Debug\InfoService.pdb
+D:\DESARROLLO\ERICK\InfoService\obj\Debug\InfoService.exe
+D:\DESARROLLO\ERICK\InfoService\obj\Debug\InfoService.pdb
+D:\DESARROLLO\ERICK\InfoService\obj\Debug\InfoService.ProjectInstaller.resources
+D:\DESARROLLO\ERICK\InfoService\obj\Debug\InfoService.csproj.GenerateResource.cache
+D:\DESARROLLO\ERICK\InfoService\bin\Debug\Newtonsoft.Json.dll
+D:\DESARROLLO\ERICK\InfoService\bin\Debug\Newtonsoft.Json.xml
+D:\DESARROLLO\ERICK\InfoService\obj\Debug\InfoService.csproj.CopyComplete

@@ -11,3 +11,16 @@ C:\Users\ERICK\Desktop\ERICK\InfoBack\InfoBack\obj\Debug\netstandard2.0\ref\Info
 C:\Users\ERICK\Desktop\ERICK\InfoBack\InfoBack\obj\Debug\netstandard2.0\InfoBack.pdb
 C:\Users\ERICK\Desktop\ERICK\InfoBack\InfoBack\obj\Debug\netstandard2.0\InfoBack.csprojAssemblyReference.cache
 C:\Users\ERICK\Desktop\ERICK\InfoBack\InfoBack\obj\Debug\netstandard2.0\XamlC.stamp
+D:\DESARROLLO\ERICK\InfoBack\InfoBack\bin\Debug\netstandard2.0\InfoBack.deps.json
+D:\DESARROLLO\ERICK\InfoBack\InfoBack\bin\Debug\netstandard2.0\InfoBack.dll
+D:\DESARROLLO\ERICK\InfoBack\InfoBack\bin\Debug\netstandard2.0\ref\InfoBack.dll
+D:\DESARROLLO\ERICK\InfoBack\InfoBack\bin\Debug\netstandard2.0\InfoBack.pdb
+D:\DESARROLLO\ERICK\InfoBack\InfoBack\obj\Debug\netstandard2.0\InfoBack.csprojAssemblyReference.cache
+D:\DESARROLLO\ERICK\InfoBack\InfoBack\obj\Debug\netstandard2.0\App.xaml.g.cs
+D:\DESARROLLO\ERICK\InfoBack\InfoBack\obj\Debug\netstandard2.0\Views\LoginPage.xaml.g.cs
+D:\DESARROLLO\ERICK\InfoBack\InfoBack\obj\Debug\netstandard2.0\InfoBack.AssemblyInfoInputs.cache
+D:\DESARROLLO\ERICK\InfoBack\InfoBack\obj\Debug\netstandard2.0\InfoBack.AssemblyInfo.cs
+D:\DESARROLLO\ERICK\InfoBack\InfoBack\obj\Debug\netstandard2.0\XamlC.stamp
+D:\DESARROLLO\ERICK\InfoBack\InfoBack\obj\Debug\netstandard2.0\InfoBack.dll
+D:\DESARROLLO\ERICK\InfoBack\InfoBack\obj\Debug\netstandard2.0\ref\InfoBack.dll
+D:\DESARROLLO\ERICK\InfoBack\InfoBack\obj\Debug\netstandard2.0\InfoBack.pdb

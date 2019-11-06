@@ -6,3 +6,11 @@ C:\Users\ERICK\Desktop\ERICK\Infomatica\obj\Debug\netstandard2.0\Infomatica.Asse
 C:\Users\ERICK\Desktop\ERICK\Infomatica\bin\Debug\netstandard2.0\Infomatica.pdb
 C:\Users\ERICK\Desktop\ERICK\Infomatica\obj\Debug\netstandard2.0\Infomatica.dll
 C:\Users\ERICK\Desktop\ERICK\Infomatica\obj\Debug\netstandard2.0\Infomatica.pdb
+D:\DESARROLLO\ERICK\Infomatica\bin\Debug\netstandard2.0\Infomatica.deps.json
+D:\DESARROLLO\ERICK\Infomatica\bin\Debug\netstandard2.0\Infomatica.dll
+D:\DESARROLLO\ERICK\Infomatica\bin\Debug\netstandard2.0\Infomatica.pdb
+D:\DESARROLLO\ERICK\Infomatica\obj\Debug\netstandard2.0\Infomatica.csprojAssemblyReference.cache
+D:\DESARROLLO\ERICK\Infomatica\obj\Debug\netstandard2.0\Infomatica.AssemblyInfoInputs.cache
+D:\DESARROLLO\ERICK\Infomatica\obj\Debug\netstandard2.0\Infomatica.AssemblyInfo.cs
+D:\DESARROLLO\ERICK\Infomatica\obj\Debug\netstandard2.0\Infomatica.dll
+D:\DESARROLLO\ERICK\Infomatica\obj\Debug\netstandard2.0\Infomatica.pdb
