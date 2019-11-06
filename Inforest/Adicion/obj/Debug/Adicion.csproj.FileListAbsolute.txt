@@ -1,0 +1,220 @@
+C:\Users\ERICK\source\repos\Restaurante\Adicion\obj\Debug\Adicion.csprojAssemblyReference.cache
+C:\Users\ERICK\source\repos\Restaurante\Adicion\obj\Debug\MainWindow.g.cs
+C:\Users\ERICK\source\repos\Restaurante\Adicion\obj\Debug\View\Login.g.cs
+C:\Users\ERICK\source\repos\Restaurante\Adicion\obj\Debug\View\Teclado.g.cs
+C:\Users\ERICK\source\repos\Restaurante\Adicion\obj\Debug\App.g.cs
+C:\Users\ERICK\source\repos\Restaurante\Adicion\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\ERICK\source\repos\Restaurante\Adicion\obj\Debug\Adicion_MarkupCompile.cache
+C:\Users\ERICK\source\repos\Restaurante\Adicion\obj\Debug\Adicion_MarkupCompile.lref
+C:\Users\ERICK\source\repos\Restaurante\Adicion\bin\Debug\Adicion.exe.config
+C:\Users\ERICK\source\repos\Restaurante\Adicion\bin\Debug\Adicion.exe
+C:\Users\ERICK\source\repos\Restaurante\Adicion\bin\Debug\Adicion.pdb
+C:\Users\ERICK\source\repos\Restaurante\Adicion\bin\Debug\Infomatica.dll
+C:\Users\ERICK\source\repos\Restaurante\Adicion\bin\Debug\Newtonsoft.Json.dll
+C:\Users\ERICK\source\repos\Restaurante\Adicion\bin\Debug\System.Drawing.Common.dll
+C:\Users\ERICK\source\repos\Restaurante\Adicion\bin\Debug\Infomatica.pdb
+C:\Users\ERICK\source\repos\Restaurante\Adicion\bin\Debug\Newtonsoft.Json.xml
+C:\Users\ERICK\source\repos\Restaurante\Adicion\obj\Debug\MainWindow.baml
+C:\Users\ERICK\source\repos\Restaurante\Adicion\obj\Debug\View\Login.baml
+C:\Users\ERICK\source\repos\Restaurante\Adicion\obj\Debug\View\Teclado.baml
+C:\Users\ERICK\source\repos\Restaurante\Adicion\obj\Debug\Adicion.g.resources
+C:\Users\ERICK\source\repos\Restaurante\Adicion\obj\Debug\Adicion.Properties.Resources.resources
+C:\Users\ERICK\source\repos\Restaurante\Adicion\obj\Debug\Adicion.csproj.GenerateResource.cache
+C:\Users\ERICK\source\repos\Restaurante\Adicion\obj\Debug\Adicion.csproj.CoreCompileInputs.cache
+C:\Users\ERICK\source\repos\Restaurante\Adicion\obj\Debug\Adicion.csproj.CopyComplete
+C:\Users\ERICK\source\repos\Restaurante\Adicion\obj\Debug\Adicion.exe
+C:\Users\ERICK\source\repos\Restaurante\Adicion\obj\Debug\Adicion.pdb
+C:\Users\ERICK\source\repos\Restaurante\Adicion\obj\Debug\View\ViewBusquedaRapida.g.cs
+C:\Users\ERICK\source\repos\Restaurante\Adicion\obj\Debug\View\ViewBusquedaRapida.baml
+C:\Users\ERICK\source\repos\Restaurante\Adicion\bin\Debug\MaterialDesignColors.dll
+C:\Users\ERICK\source\repos\Restaurante\Adicion\bin\Debug\MaterialDesignThemes.Wpf.dll
+C:\Users\ERICK\source\repos\Restaurante\Adicion\bin\Debug\MaterialDesignColors.pdb
+C:\Users\ERICK\source\repos\Restaurante\Adicion\bin\Debug\MaterialDesignThemes.Wpf.pdb
+C:\Users\ERICK\source\repos\Restaurante\Adicion\bin\Debug\MaterialDesignThemes.Wpf.xml
+C:\Users\ERICK\OneDrive\PROGRAMAS\Restaurante\Adicion\obj\Debug\Adicion.csprojAssemblyReference.cache
+C:\Users\ERICK\OneDrive\PROGRAMAS\Restaurante\Adicion\obj\Debug\MainWindow.g.cs
+C:\Users\ERICK\OneDrive\PROGRAMAS\Restaurante\Adicion\obj\Debug\View\Login.g.cs
+C:\Users\ERICK\OneDrive\PROGRAMAS\Restaurante\Adicion\obj\Debug\View\Teclado.g.cs
+C:\Users\ERICK\OneDrive\PROGRAMAS\Restaurante\Adicion\obj\Debug\View\ViewBusquedaRapida.g.cs
+C:\Users\ERICK\OneDrive\PROGRAMAS\Restaurante\Adicion\obj\Debug\App.g.cs
+C:\Users\ERICK\OneDrive\PROGRAMAS\Restaurante\Adicion\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\ERICK\OneDrive\PROGRAMAS\Restaurante\Adicion\obj\Debug\Adicion_MarkupCompile.cache
+C:\Users\ERICK\OneDrive\PROGRAMAS\Restaurante\Adicion\obj\Debug\Adicion_MarkupCompile.lref
+C:\Users\ERICK\OneDrive\PROGRAMAS\Restaurante\Adicion\obj\Debug\Adicion.exe
+C:\Users\ERICK\OneDrive\PROGRAMAS\Restaurante\Adicion\obj\Debug\Adicion.pdb
+C:\Users\ERICK\OneDrive\PROGRAMAS\Restaurante\Adicion\bin\Debug\Adicion.exe.config
+C:\Users\ERICK\OneDrive\PROGRAMAS\Restaurante\Adicion\bin\Debug\Adicion.exe
+C:\Users\ERICK\OneDrive\PROGRAMAS\Restaurante\Adicion\bin\Debug\Adicion.pdb
+C:\Users\ERICK\OneDrive\PROGRAMAS\Restaurante\Adicion\bin\Debug\Infomatica.dll
+C:\Users\ERICK\OneDrive\PROGRAMAS\Restaurante\Adicion\bin\Debug\MaterialDesignColors.dll
+C:\Users\ERICK\OneDrive\PROGRAMAS\Restaurante\Adicion\bin\Debug\MaterialDesignThemes.Wpf.dll
+C:\Users\ERICK\OneDrive\PROGRAMAS\Restaurante\Adicion\bin\Debug\Newtonsoft.Json.dll
+C:\Users\ERICK\OneDrive\PROGRAMAS\Restaurante\Adicion\bin\Debug\System.Drawing.Common.dll
+C:\Users\ERICK\OneDrive\PROGRAMAS\Restaurante\Adicion\bin\Debug\Infomatica.pdb
+C:\Users\ERICK\OneDrive\PROGRAMAS\Restaurante\Adicion\bin\Debug\MaterialDesignColors.pdb
+C:\Users\ERICK\OneDrive\PROGRAMAS\Restaurante\Adicion\bin\Debug\MaterialDesignThemes.Wpf.pdb
+C:\Users\ERICK\OneDrive\PROGRAMAS\Restaurante\Adicion\bin\Debug\MaterialDesignThemes.Wpf.xml
+C:\Users\ERICK\OneDrive\PROGRAMAS\Restaurante\Adicion\bin\Debug\Newtonsoft.Json.xml
+C:\Users\ERICK\OneDrive\PROGRAMAS\Restaurante\Adicion\obj\Debug\MainWindow.baml
+C:\Users\ERICK\OneDrive\PROGRAMAS\Restaurante\Adicion\obj\Debug\View\Login.baml
+C:\Users\ERICK\OneDrive\PROGRAMAS\Restaurante\Adicion\obj\Debug\View\Teclado.baml
+C:\Users\ERICK\OneDrive\PROGRAMAS\Restaurante\Adicion\obj\Debug\View\ViewBusquedaRapida.baml
+C:\Users\ERICK\OneDrive\PROGRAMAS\Restaurante\Adicion\obj\Debug\Adicion.g.resources
+C:\Users\ERICK\OneDrive\PROGRAMAS\Restaurante\Adicion\obj\Debug\Adicion.Properties.Resources.resources
+C:\Users\ERICK\OneDrive\PROGRAMAS\Restaurante\Adicion\obj\Debug\Adicion.csproj.GenerateResource.cache
+C:\Users\ERICK\OneDrive\PROGRAMAS\Restaurante\Adicion\obj\Debug\Adicion.csproj.CoreCompileInputs.cache
+C:\Users\ERICK\OneDrive\PROGRAMAS\Restaurante\Adicion\obj\Debug\Adicion.csproj.CopyComplete
+C:\Users\palmeida\Desktop\visualSin título\Adicion\obj\Debug\Adicion.csprojAssemblyReference.cache
+C:\Users\palmeida\Desktop\visualSin título\Adicion\obj\Debug\MainWindow.g.cs
+C:\Users\palmeida\Desktop\visualSin título\Adicion\obj\Debug\View\Login.g.cs
+C:\Users\palmeida\Desktop\visualSin título\Adicion\obj\Debug\View\Teclado.g.cs
+C:\Users\palmeida\Desktop\visualSin título\Adicion\obj\Debug\View\ViewBusquedaRapida.g.cs
+C:\Users\palmeida\Desktop\visualSin título\Adicion\obj\Debug\View\ViewListar.g.cs
+C:\Users\palmeida\Desktop\visualSin título\Adicion\obj\Debug\View\ViewVenta.g.cs
+C:\Users\palmeida\Desktop\visualSin título\Adicion\obj\Debug\App.g.cs
+C:\Users\palmeida\Desktop\visualSin título\Adicion\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\palmeida\Desktop\visualSin título\Adicion\obj\Debug\Adicion_MarkupCompile.cache
+C:\Users\palmeida\Desktop\visualSin título\Adicion\obj\Debug\Adicion_MarkupCompile.lref
+C:\Users\palmeida\Desktop\visualSin título\Adicion\obj\Debug\Adicion.exe
+C:\Users\palmeida\Desktop\visualSin título\Adicion\obj\Debug\Adicion.pdb
+C:\Users\palmeida\Desktop\visualSin título\Adicion\bin\Debug\Adicion.exe.config
+C:\Users\palmeida\Desktop\visualSin título\Adicion\bin\Debug\Adicion.exe
+C:\Users\palmeida\Desktop\visualSin título\Adicion\bin\Debug\Adicion.pdb
+C:\Users\palmeida\Desktop\visualSin título\Adicion\bin\Debug\Infomatica.dll
+C:\Users\palmeida\Desktop\visualSin título\Adicion\bin\Debug\Newtonsoft.Json.dll
+C:\Users\palmeida\Desktop\visualSin título\Adicion\bin\Debug\System.Drawing.Common.dll
+C:\Users\palmeida\Desktop\visualSin título\Adicion\bin\Debug\Infomatica.pdb
+C:\Users\palmeida\Desktop\visualSin título\Adicion\bin\Debug\Newtonsoft.Json.xml
+C:\Users\palmeida\Desktop\visualSin título\Adicion\obj\Debug\MainWindow.baml
+C:\Users\palmeida\Desktop\visualSin título\Adicion\obj\Debug\View\Login.baml
+C:\Users\palmeida\Desktop\visualSin título\Adicion\obj\Debug\View\Teclado.baml
+C:\Users\palmeida\Desktop\visualSin título\Adicion\obj\Debug\View\ViewBusquedaRapida.baml
+C:\Users\palmeida\Desktop\visualSin título\Adicion\obj\Debug\View\ViewListar.baml
+C:\Users\palmeida\Desktop\visualSin título\Adicion\obj\Debug\View\ViewVenta.baml
+C:\Users\palmeida\Desktop\visualSin título\Adicion\obj\Debug\Adicion.g.resources
+C:\Users\palmeida\Desktop\visualSin título\Adicion\obj\Debug\Adicion.Properties.Resources.resources
+C:\Users\palmeida\Desktop\visualSin título\Adicion\obj\Debug\Adicion.csproj.GenerateResource.cache
+C:\Users\palmeida\Desktop\visualSin título\Adicion\obj\Debug\Adicion.csproj.CoreCompileInputs.cache
+C:\Users\palmeida\Desktop\visualSin título\Adicion\obj\Debug\Adicion.csproj.CopyComplete
+D:\DESA INFOREST\NEW INFOREST\Adicion\bin\Debug\Adicion.exe.config
+D:\DESA INFOREST\NEW INFOREST\Adicion\bin\Debug\Adicion.exe
+D:\DESA INFOREST\NEW INFOREST\Adicion\bin\Debug\Adicion.pdb
+D:\DESA INFOREST\NEW INFOREST\Adicion\bin\Debug\Newtonsoft.Json.dll
+D:\DESA INFOREST\NEW INFOREST\Adicion\bin\Debug\System.Drawing.Common.dll
+D:\DESA INFOREST\NEW INFOREST\Adicion\bin\Debug\Newtonsoft.Json.xml
+D:\DESA INFOREST\NEW INFOREST\Adicion\obj\Debug\MainWindow.g.cs
+D:\DESA INFOREST\NEW INFOREST\Adicion\obj\Debug\View\Login.g.cs
+D:\DESA INFOREST\NEW INFOREST\Adicion\obj\Debug\View\Teclado.g.cs
+D:\DESA INFOREST\NEW INFOREST\Adicion\obj\Debug\View\ViewBusquedaRapida.g.cs
+D:\DESA INFOREST\NEW INFOREST\Adicion\obj\Debug\View\ViewListar.g.cs
+D:\DESA INFOREST\NEW INFOREST\Adicion\obj\Debug\View\ViewVenta.g.cs
+D:\DESA INFOREST\NEW INFOREST\Adicion\obj\Debug\App.g.cs
+D:\DESA INFOREST\NEW INFOREST\Adicion\obj\Debug\GeneratedInternalTypeHelper.g.cs
+D:\DESA INFOREST\NEW INFOREST\Adicion\obj\Debug\Adicion_MarkupCompile.cache
+D:\DESA INFOREST\NEW INFOREST\Adicion\obj\Debug\Adicion_MarkupCompile.lref
+D:\DESA INFOREST\NEW INFOREST\Adicion\obj\Debug\MainWindow.baml
+D:\DESA INFOREST\NEW INFOREST\Adicion\obj\Debug\View\Login.baml
+D:\DESA INFOREST\NEW INFOREST\Adicion\obj\Debug\View\Teclado.baml
+D:\DESA INFOREST\NEW INFOREST\Adicion\obj\Debug\View\ViewBusquedaRapida.baml
+D:\DESA INFOREST\NEW INFOREST\Adicion\obj\Debug\View\ViewListar.baml
+D:\DESA INFOREST\NEW INFOREST\Adicion\obj\Debug\View\ViewVenta.baml
+D:\DESA INFOREST\NEW INFOREST\Adicion\obj\Debug\Adicion.g.resources
+D:\DESA INFOREST\NEW INFOREST\Adicion\obj\Debug\Adicion.Properties.Resources.resources
+D:\DESA INFOREST\NEW INFOREST\Adicion\obj\Debug\Adicion.csproj.GenerateResource.cache
+D:\DESA INFOREST\NEW INFOREST\Adicion\obj\Debug\Adicion.csproj.CoreCompileInputs.cache
+D:\DESA INFOREST\NEW INFOREST\Adicion\obj\Debug\Adicion.csproj.CopyComplete
+D:\DESA INFOREST\NEW INFOREST\Adicion\obj\Debug\Adicion.exe
+D:\DESA INFOREST\NEW INFOREST\Adicion\obj\Debug\Adicion.pdb
+C:\Users\practicante4\Desktop\INFOREST\Adicion\bin\Debug\Adicion.exe.config
+C:\Users\practicante4\Desktop\INFOREST\Adicion\bin\Debug\Adicion.exe
+C:\Users\practicante4\Desktop\INFOREST\Adicion\bin\Debug\Adicion.pdb
+C:\Users\practicante4\Desktop\INFOREST\Adicion\bin\Debug\Infomatica.dll
+C:\Users\practicante4\Desktop\INFOREST\Adicion\bin\Debug\Newtonsoft.Json.dll
+C:\Users\practicante4\Desktop\INFOREST\Adicion\bin\Debug\Infomatica.pdb
+C:\Users\practicante4\Desktop\INFOREST\Adicion\bin\Debug\Newtonsoft.Json.xml
+C:\Users\practicante4\Desktop\INFOREST\Adicion\obj\Debug\Adicion.csprojAssemblyReference.cache
+C:\Users\practicante4\Desktop\INFOREST\Adicion\obj\Debug\MainWindow.g.cs
+C:\Users\practicante4\Desktop\INFOREST\Adicion\obj\Debug\View\Login.g.cs
+C:\Users\practicante4\Desktop\INFOREST\Adicion\obj\Debug\View\Teclado.g.cs
+C:\Users\practicante4\Desktop\INFOREST\Adicion\obj\Debug\View\ViewBusquedaRapida.g.cs
+C:\Users\practicante4\Desktop\INFOREST\Adicion\obj\Debug\View\ViewListar.g.cs
+C:\Users\practicante4\Desktop\INFOREST\Adicion\obj\Debug\View\ViewVenta.g.cs
+C:\Users\practicante4\Desktop\INFOREST\Adicion\obj\Debug\App.g.cs
+C:\Users\practicante4\Desktop\INFOREST\Adicion\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\practicante4\Desktop\INFOREST\Adicion\obj\Debug\Adicion_MarkupCompile.cache
+C:\Users\practicante4\Desktop\INFOREST\Adicion\obj\Debug\Adicion_MarkupCompile.lref
+C:\Users\practicante4\Desktop\INFOREST\Adicion\obj\Debug\MainWindow.baml
+C:\Users\practicante4\Desktop\INFOREST\Adicion\obj\Debug\View\Login.baml
+C:\Users\practicante4\Desktop\INFOREST\Adicion\obj\Debug\View\Teclado.baml
+C:\Users\practicante4\Desktop\INFOREST\Adicion\obj\Debug\View\ViewBusquedaRapida.baml
+C:\Users\practicante4\Desktop\INFOREST\Adicion\obj\Debug\View\ViewListar.baml
+C:\Users\practicante4\Desktop\INFOREST\Adicion\obj\Debug\View\ViewVenta.baml
+C:\Users\practicante4\Desktop\INFOREST\Adicion\obj\Debug\Adicion.g.resources
+C:\Users\practicante4\Desktop\INFOREST\Adicion\obj\Debug\Adicion.Properties.Resources.resources
+C:\Users\practicante4\Desktop\INFOREST\Adicion\obj\Debug\Adicion.csproj.GenerateResource.cache
+C:\Users\practicante4\Desktop\INFOREST\Adicion\obj\Debug\Adicion.csproj.CoreCompileInputs.cache
+C:\Users\practicante4\Desktop\INFOREST\Adicion\obj\Debug\Adicion.csproj.CopyComplete
+C:\Users\practicante4\Desktop\INFOREST\Adicion\obj\Debug\Adicion.exe
+C:\Users\practicante4\Desktop\INFOREST\Adicion\obj\Debug\Adicion.pdb
+C:\Users\Practicante3\Desktop\Inforest\Adicion\obj\Debug\Adicion.csprojAssemblyReference.cache
+C:\Users\Practicante3\Desktop\Inforest\Adicion\obj\Debug\MainWindow.g.cs
+C:\Users\Practicante3\Desktop\Inforest\Adicion\obj\Debug\View\Login.g.cs
+C:\Users\Practicante3\Desktop\Inforest\Adicion\obj\Debug\View\Teclado.g.cs
+C:\Users\Practicante3\Desktop\Inforest\Adicion\obj\Debug\View\ViewBusquedaRapida.g.cs
+C:\Users\Practicante3\Desktop\Inforest\Adicion\obj\Debug\View\ViewListar.g.cs
+C:\Users\Practicante3\Desktop\Inforest\Adicion\obj\Debug\View\ViewVenta.g.cs
+C:\Users\Practicante3\Desktop\Inforest\Adicion\obj\Debug\App.g.cs
+C:\Users\Practicante3\Desktop\Inforest\Adicion\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\Practicante3\Desktop\Inforest\Adicion\obj\Debug\Adicion_MarkupCompile.cache
+C:\Users\Practicante3\Desktop\Inforest\Adicion\obj\Debug\Adicion_MarkupCompile.lref
+C:\Users\Practicante3\Desktop\Inforest\Adicion\obj\Debug\Adicion.exe
+C:\Users\Practicante3\Desktop\Inforest\Adicion\obj\Debug\Adicion.pdb
+C:\Users\Practicante3\Desktop\Inforest\Adicion\bin\Debug\Adicion.exe.config
+C:\Users\Practicante3\Desktop\Inforest\Adicion\bin\Debug\Adicion.exe
+C:\Users\Practicante3\Desktop\Inforest\Adicion\bin\Debug\Adicion.pdb
+C:\Users\Practicante3\Desktop\Inforest\Adicion\bin\Debug\Infomatica.dll
+C:\Users\Practicante3\Desktop\Inforest\Adicion\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Practicante3\Desktop\Inforest\Adicion\bin\Debug\Infomatica.pdb
+C:\Users\Practicante3\Desktop\Inforest\Adicion\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Practicante3\Desktop\Inforest\Adicion\obj\Debug\MainWindow.baml
+C:\Users\Practicante3\Desktop\Inforest\Adicion\obj\Debug\View\Login.baml
+C:\Users\Practicante3\Desktop\Inforest\Adicion\obj\Debug\View\Teclado.baml
+C:\Users\Practicante3\Desktop\Inforest\Adicion\obj\Debug\View\ViewBusquedaRapida.baml
+C:\Users\Practicante3\Desktop\Inforest\Adicion\obj\Debug\View\ViewListar.baml
+C:\Users\Practicante3\Desktop\Inforest\Adicion\obj\Debug\View\ViewVenta.baml
+C:\Users\Practicante3\Desktop\Inforest\Adicion\obj\Debug\Adicion.g.resources
+C:\Users\Practicante3\Desktop\Inforest\Adicion\obj\Debug\Adicion.Properties.Resources.resources
+C:\Users\Practicante3\Desktop\Inforest\Adicion\obj\Debug\Adicion.csproj.GenerateResource.cache
+C:\Users\Practicante3\Desktop\Inforest\Adicion\obj\Debug\Adicion.csproj.CoreCompileInputs.cache
+C:\Users\Practicante3\Desktop\Inforest\Adicion\obj\Debug\Adicion.csproj.CopyComplete
+C:\Users\ERICK\Desktop\Inforest\Adicion\bin\Debug\Adicion.exe.config
+C:\Users\ERICK\Desktop\Inforest\Adicion\bin\Debug\Adicion.exe
+C:\Users\ERICK\Desktop\Inforest\Adicion\bin\Debug\Adicion.pdb
+C:\Users\ERICK\Desktop\Inforest\Adicion\bin\Debug\Infomatica.dll
+C:\Users\ERICK\Desktop\Inforest\Adicion\bin\Debug\Newtonsoft.Json.dll
+C:\Users\ERICK\Desktop\Inforest\Adicion\bin\Debug\Infomatica.pdb
+C:\Users\ERICK\Desktop\Inforest\Adicion\bin\Debug\Newtonsoft.Json.xml
+C:\Users\ERICK\Desktop\Inforest\Adicion\obj\Debug\Adicion.csprojAssemblyReference.cache
+C:\Users\ERICK\Desktop\Inforest\Adicion\obj\Debug\MainWindow.g.cs
+C:\Users\ERICK\Desktop\Inforest\Adicion\obj\Debug\View\Login.g.cs
+C:\Users\ERICK\Desktop\Inforest\Adicion\obj\Debug\View\Teclado.g.cs
+C:\Users\ERICK\Desktop\Inforest\Adicion\obj\Debug\View\ViewBusquedaRapida.g.cs
+C:\Users\ERICK\Desktop\Inforest\Adicion\obj\Debug\View\ViewListar.g.cs
+C:\Users\ERICK\Desktop\Inforest\Adicion\obj\Debug\View\ViewVenta.g.cs
+C:\Users\ERICK\Desktop\Inforest\Adicion\obj\Debug\App.g.cs
+C:\Users\ERICK\Desktop\Inforest\Adicion\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\ERICK\Desktop\Inforest\Adicion\obj\Debug\Adicion_MarkupCompile.cache
+C:\Users\ERICK\Desktop\Inforest\Adicion\obj\Debug\Adicion_MarkupCompile.lref
+C:\Users\ERICK\Desktop\Inforest\Adicion\obj\Debug\MainWindow.baml
+C:\Users\ERICK\Desktop\Inforest\Adicion\obj\Debug\View\Login.baml
+C:\Users\ERICK\Desktop\Inforest\Adicion\obj\Debug\View\Teclado.baml
+C:\Users\ERICK\Desktop\Inforest\Adicion\obj\Debug\View\ViewBusquedaRapida.baml
+C:\Users\ERICK\Desktop\Inforest\Adicion\obj\Debug\View\ViewListar.baml
+C:\Users\ERICK\Desktop\Inforest\Adicion\obj\Debug\View\ViewVenta.baml
+C:\Users\ERICK\Desktop\Inforest\Adicion\obj\Debug\Adicion.g.resources
+C:\Users\ERICK\Desktop\Inforest\Adicion\obj\Debug\Adicion.Properties.Resources.resources
+C:\Users\ERICK\Desktop\Inforest\Adicion\obj\Debug\Adicion.csproj.GenerateResource.cache
+C:\Users\ERICK\Desktop\Inforest\Adicion\obj\Debug\Adicion.csproj.CoreCompileInputs.cache
+C:\Users\ERICK\Desktop\Inforest\Adicion\obj\Debug\Adicion.csproj.CopyComplete
+C:\Users\ERICK\Desktop\Inforest\Adicion\obj\Debug\Adicion.exe
+C:\Users\ERICK\Desktop\Inforest\Adicion\obj\Debug\Adicion.pdb
