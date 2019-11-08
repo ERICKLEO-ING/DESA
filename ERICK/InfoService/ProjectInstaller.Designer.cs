@@ -41,7 +41,7 @@
             // 
             this.serviceInstaller1.Description = "Servicio de InfoRest ";
             this.serviceInstaller1.DisplayName = "Inforest";
-            this.serviceInstaller1.ServiceName = "Service1";
+            this.serviceInstaller1.ServiceName = "InfoRestService";
             this.serviceInstaller1.StartType = System.ServiceProcess.ServiceStartMode.Automatic;
             // 
             // ProjectInstaller

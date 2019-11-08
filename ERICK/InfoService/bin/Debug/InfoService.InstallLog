@@ -11,3 +11,29 @@ Los parámetros afectados son:
    logtoconsole = 
    logfile = D:\DESARROLLO\ERICK\InfoService\bin\Debug\InfoService.InstallLog
    assemblypath = D:\DESARROLLO\ERICK\InfoService\bin\Debug\InfoService.exe
+Instalando ensamblado 'D:\DESARROLLO\ERICK\InfoService\bin\Debug\InfoService.exe'.
+Los parámetros afectados son:
+   logtoconsole = 
+   logfile = D:\DESARROLLO\ERICK\InfoService\bin\Debug\InfoService.InstallLog
+   assemblypath = D:\DESARROLLO\ERICK\InfoService\bin\Debug\InfoService.exe
+Instalando el servicio Service1...
+Creando el origen de EventLog Service1 en el registro Application...
+Deshaciendo ensamblado 'D:\DESARROLLO\ERICK\InfoService\bin\Debug\InfoService.exe'.
+Los parámetros afectados son:
+   logtoconsole = 
+   logfile = D:\DESARROLLO\ERICK\InfoService\bin\Debug\InfoService.InstallLog
+   assemblypath = D:\DESARROLLO\ERICK\InfoService\bin\Debug\InfoService.exe
+Restaurando el registro de eventos al estado anterior para el origen Service1.
+Instalando ensamblado 'D:\DESARROLLO\ERICK\InfoService\bin\Debug\InfoService.exe'.
+Los parámetros afectados son:
+   logtoconsole = 
+   logfile = D:\DESARROLLO\ERICK\InfoService\bin\Debug\InfoService.InstallLog
+   assemblypath = D:\DESARROLLO\ERICK\InfoService\bin\Debug\InfoService.exe
+Instalando el servicio InfoRestService...
+El servicio InfoRestService se ha instalado correctamente.
+Creando el origen de EventLog InfoRestService en el registro Application...
+Confirmando ensamblado 'D:\DESARROLLO\ERICK\InfoService\bin\Debug\InfoService.exe'.
+Los parámetros afectados son:
+   logtoconsole = 
+   logfile = D:\DESARROLLO\ERICK\InfoService\bin\Debug\InfoService.InstallLog
+   assemblypath = D:\DESARROLLO\ERICK\InfoService\bin\Debug\InfoService.exe
