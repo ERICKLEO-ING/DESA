@@ -1,0 +1,13 @@
+C:\Users\ERICK\source\repos\DESA\Easy.Dev\prueba\bin\Debug\netcoreapp3.1\prueba.exe
+C:\Users\ERICK\source\repos\DESA\Easy.Dev\prueba\bin\Debug\netcoreapp3.1\prueba.deps.json
+C:\Users\ERICK\source\repos\DESA\Easy.Dev\prueba\bin\Debug\netcoreapp3.1\prueba.runtimeconfig.json
+C:\Users\ERICK\source\repos\DESA\Easy.Dev\prueba\bin\Debug\netcoreapp3.1\prueba.runtimeconfig.dev.json
+C:\Users\ERICK\source\repos\DESA\Easy.Dev\prueba\bin\Debug\netcoreapp3.1\prueba.dll
+C:\Users\ERICK\source\repos\DESA\Easy.Dev\prueba\bin\Debug\netcoreapp3.1\prueba.pdb
+C:\Users\ERICK\source\repos\DESA\Easy.Dev\prueba\obj\Debug\netcoreapp3.1\prueba.csprojAssemblyReference.cache
+C:\Users\ERICK\source\repos\DESA\Easy.Dev\prueba\obj\Debug\netcoreapp3.1\prueba.csproj.CoreCompileInputs.cache
+C:\Users\ERICK\source\repos\DESA\Easy.Dev\prueba\obj\Debug\netcoreapp3.1\prueba.AssemblyInfoInputs.cache
+C:\Users\ERICK\source\repos\DESA\Easy.Dev\prueba\obj\Debug\netcoreapp3.1\prueba.AssemblyInfo.cs
+C:\Users\ERICK\source\repos\DESA\Easy.Dev\prueba\obj\Debug\netcoreapp3.1\prueba.dll
+C:\Users\ERICK\source\repos\DESA\Easy.Dev\prueba\obj\Debug\netcoreapp3.1\prueba.pdb
+C:\Users\ERICK\source\repos\DESA\Easy.Dev\prueba\obj\Debug\netcoreapp3.1\prueba.genruntimeconfig.cache
