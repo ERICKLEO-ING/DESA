@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\DESARROLLO\\ERICK\\InfoBack\\InfoBack\\InfoBack.csproj": {}
+    "C:\\Users\\ERICK\\Source\\Repos\\ERICKLEO-ING\\DESA\\ERICK\\InfoBack\\InfoBack\\InfoBack.csproj": {}
   },
   "projects": {
-    "D:\\DESARROLLO\\ERICK\\InfoBack\\InfoBack\\InfoBack.csproj": {
+    "C:\\Users\\ERICK\\Source\\Repos\\ERICKLEO-ING\\DESA\\ERICK\\InfoBack\\InfoBack\\InfoBack.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\DESARROLLO\\ERICK\\InfoBack\\InfoBack\\InfoBack.csproj",
+        "projectUniqueName": "C:\\Users\\ERICK\\Source\\Repos\\ERICKLEO-ING\\DESA\\ERICK\\InfoBack\\InfoBack\\InfoBack.csproj",
         "projectName": "InfoBack",
-        "projectPath": "D:\\DESARROLLO\\ERICK\\InfoBack\\InfoBack\\InfoBack.csproj",
+        "projectPath": "C:\\Users\\ERICK\\Source\\Repos\\ERICKLEO-ING\\DESA\\ERICK\\InfoBack\\InfoBack\\InfoBack.csproj",
         "packagesPath": "C:\\Users\\ERICK\\.nuget\\packages\\",
-        "outputPath": "D:\\DESARROLLO\\ERICK\\InfoBack\\InfoBack\\obj\\",
+        "outputPath": "C:\\Users\\ERICK\\Source\\Repos\\ERICKLEO-ING\\DESA\\ERICK\\InfoBack\\InfoBack\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\",
@@ -72,7 +72,7 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
         }
       }
     }

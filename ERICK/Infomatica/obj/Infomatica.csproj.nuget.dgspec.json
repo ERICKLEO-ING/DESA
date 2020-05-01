@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\DESARROLLO\\ERICK\\Infomatica\\Infomatica.csproj": {}
+    "C:\\Users\\ERICK\\Source\\Repos\\ERICKLEO-ING\\DESA\\ERICK\\Infomatica\\Infomatica.csproj": {}
   },
   "projects": {
-    "D:\\DESARROLLO\\ERICK\\Infomatica\\Infomatica.csproj": {
+    "C:\\Users\\ERICK\\Source\\Repos\\ERICKLEO-ING\\DESA\\ERICK\\Infomatica\\Infomatica.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\DESARROLLO\\ERICK\\Infomatica\\Infomatica.csproj",
+        "projectUniqueName": "C:\\Users\\ERICK\\Source\\Repos\\ERICKLEO-ING\\DESA\\ERICK\\Infomatica\\Infomatica.csproj",
         "projectName": "Infomatica",
-        "projectPath": "D:\\DESARROLLO\\ERICK\\Infomatica\\Infomatica.csproj",
+        "projectPath": "C:\\Users\\ERICK\\Source\\Repos\\ERICKLEO-ING\\DESA\\ERICK\\Infomatica\\Infomatica.csproj",
         "packagesPath": "C:\\Users\\ERICK\\.nuget\\packages\\",
-        "outputPath": "D:\\DESARROLLO\\ERICK\\Infomatica\\obj\\",
+        "outputPath": "C:\\Users\\ERICK\\Source\\Repos\\ERICKLEO-ING\\DESA\\ERICK\\Infomatica\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\",
@@ -64,7 +64,7 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
         }
       }
     }
