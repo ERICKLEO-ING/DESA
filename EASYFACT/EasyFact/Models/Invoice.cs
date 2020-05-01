@@ -971,11 +971,12 @@ namespace EasyFact.Models
             writer.WriteElementString("cbc:CustomizationID", CustomizationID.Value);
 
             writer.WriteStartElement("cbc:ProfileID ");
-            //writer.WriteAttributeString("listID", "0101");
-            writer.WriteAttributeString("schemeName", "SUNAT:Identificador de Tipo de Operación");
-            writer.WriteAttributeString("schemeAgencyName", "PE:SUNAT");
-            writer.WriteAttributeString("schemeURI", "urn:pe:gob:sunat:cpe:see:gem: catalogos:catalogo17");
-            writer.WriteString(ProfileID.Value);
+            {
+                writer.WriteAttributeString("schemeName", "SUNAT:Identificador de Tipo de Operación");
+                writer.WriteAttributeString("schemeAgencyName", "PE:SUNAT");
+                writer.WriteAttributeString("schemeURI", "urn:pe:gob:sunat:cpe:see:gem: catalogos:catalogo17");
+                writer.WriteString(ProfileID.Value);
+            }
             writer.WriteEndElement();
 
             writer.WriteElementString("cbc:ID", ID.Value);
@@ -984,23 +985,28 @@ namespace EasyFact.Models
             writer.WriteElementString("cbc:DueDate", DueDate.Value.ToString("yyyy-MM-dd"));
 
             writer.WriteStartElement("cbc:InvoiceTypeCode");
-            //writer.WriteAttributeString("listID", "0101");
-            writer.WriteAttributeString("listAgencyName", "PE:SUNAT");
-            writer.WriteAttributeString("listName", "SUNAT:Identificador de Tipo de Documento");
-            writer.WriteAttributeString("listURI", "urn:pe:gob:sunat:cpe:see:gem:catalogos:catalogo01");
-            writer.WriteString(InvoiceTypeCode.Value);
+            {
+                writer.WriteAttributeString("listAgencyName", "PE:SUNAT");
+                writer.WriteAttributeString("listName", "SUNAT:Identificador de Tipo de Documento");
+                writer.WriteAttributeString("listURI", "urn:pe:gob:sunat:cpe:see:gem:catalogos:catalogo01");
+                writer.WriteString(InvoiceTypeCode.Value);
+            }
             writer.WriteEndElement();
 
             writer.WriteStartElement("cbc:Note");
-            writer.WriteAttributeString("languageLocaleID", "1000");
-            writer.WriteString(Note[0].Value);
+            {
+                writer.WriteAttributeString("languageLocaleID", "1000");
+                writer.WriteString(Note[0].Value);
+            }
             writer.WriteEndElement();
 
             writer.WriteStartElement("cbc:DocumentCurrencyCode");
-            writer.WriteAttributeString("listID", "ISO 4217 Alpha");
-            writer.WriteAttributeString("listName", "Currency");
-            writer.WriteAttributeString("listAgencyName", "United Nations Economic Commission for Europe");
-            writer.WriteString(DocumentCurrencyCode.Value);
+            {
+                writer.WriteAttributeString("listID", "ISO 4217 Alpha");
+                writer.WriteAttributeString("listName", "Currency");
+                writer.WriteAttributeString("listAgencyName", "United Nations Economic Commission for Europe");
+                writer.WriteString(DocumentCurrencyCode.Value);
+            }
             writer.WriteEndElement();
 
             writer.WriteElementString("cbc:LineCountNumeric", LineCountNumeric.Value.ToString());
@@ -1312,8 +1318,8 @@ namespace EasyFact.Models
             writer.WriteEndElement();
             #endregion
 
-            #region InvoiceLines
-            foreach (var invoiceLine in invoiceLineField)
+            #region InvoiceLine
+            foreach (var invoiceLine in InvoiceLine)
             {
                 writer.WriteStartElement("cac:InvoiceLine");
                 {
