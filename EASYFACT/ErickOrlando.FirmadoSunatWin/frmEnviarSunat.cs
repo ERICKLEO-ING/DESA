@@ -425,7 +425,10 @@ namespace ErickOrlando.FirmadoSunatWin
                     AccountingCustomerParty = accountingCustomerParty,
                     TaxTotal = taxTotal.ToArray(),
                     LegalMonetaryTotal = legalMonetaryTotal,
-
+                    ProfileID = new ProfileIDType
+                    {
+                        Value = "0101"
+                    }
                 };
 
                 //XmlSerializer serializer = new XmlSerializer(typeof(Invoice));
@@ -440,15 +443,14 @@ namespace ErickOrlando.FirmadoSunatWin
                 XmlSerializer xmlSerializer = new XmlSerializer(typeof(Invoice));
 
                 using (Stream stream = new FileStream(@"D:\XML.xml", FileMode.Create))
+
                 using (XmlWriter xmlWriter = new XmlTextWriter(stream,Encoding.Unicode))
                 {
                     xmlSerializer.Serialize(xmlWriter, invoice);
                 }
-
             }
             catch (Exception ex)
             {
-
                 throw;
             }
         }

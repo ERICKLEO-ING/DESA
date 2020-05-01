@@ -43,6 +43,7 @@
                 throw;
             }
         }
+
         #endregion
 
         #region GeneracionXML
@@ -53,9 +54,10 @@
                 #region EN-ENEX
 
                 string[] Cabecera = Doc.Trama.EN.Split('|');
-                //Falta Validar signatureCac
+                //Falta Validar signatureCac Tipo de firma
+                // para la firma
                 SignatureType[] signatureCac = new SignatureType[]
-                {
+{
                     new SignatureType()
                 {
                     ID = new IDType { Value= "LlamaSign" },
@@ -88,8 +90,9 @@
                         }
                     }
                 }
-                };
+};
 
+                //proveedor
                 SupplierPartyType accountingSupplierParty = new SupplierPartyType()
                 {
                     Party = new PartyType
@@ -133,6 +136,7 @@
                     CustomerAssignedAccountID = new CustomerAssignedAccountIDType { Value = Cabecera[8].ToString() }
                 };
 
+                //cliente
                 CustomerPartyType accountingCustomerParty = new CustomerPartyType()
                 {
                     Party = new PartyType
@@ -157,13 +161,13 @@
                         PostalAddress = new AddressType
                         {
                             ID = new IDType { Value = "0001" },
-                            District = new DistrictType { Value = "a" },
-                            CityName = new CityNameType { Value = "a" },
-                            StreetName = new StreetNameType { Value = "" },
+                            District = new DistrictType { Value = "Distrito" },
+                            CityName = new CityNameType { Value = "Ciudad" },
+                            StreetName = new StreetNameType { Value = "Calle 1" },
                             CitySubdivisionName = new CitySubdivisionNameType { Value = "" },
                             Country = new CountryType
                             {
-                                IdentificationCode = new IdentificationCodeType { Value = "aaa" }
+                                IdentificationCode = new IdentificationCodeType { Value = "PE" }
                             },
                             CountrySubentity = new CountrySubentityType { Value = "" },
 
@@ -177,39 +181,45 @@
                 };
                 #endregion
 
-
-                List<TaxTotalType> taxTotal = new List<TaxTotalType>()
+                #region Montos - IGV - INAFECTOS - OTROS (cac:TaxTotal)
+                //Impuestos
+                List<TaxTotalType> taxTotal = new List<TaxTotalType>();
+                foreach (var Impuestos in Doc.Trama.DI)
                 {
-                    new TaxTotalType()
+                    string[] IMP = Impuestos.Split('|');
+                    TaxTotalType taxTotalType = new TaxTotalType()
                     {
-                        TaxAmount = new TaxAmountType{currencyID="PEN",Value=Convert.ToDecimal(7891.2)},
+                        TaxAmount = new TaxAmountType { currencyID = "PEN", Value = Convert.ToDecimal(Cabecera[1].ToString()) },
                         TaxSubtotal = new TaxSubtotalType[]
                         {
                             new TaxSubtotalType
                             {
-                                TaxAmount = new TaxAmountType{currencyID="PEN",Value=Convert.ToDecimal(7891.2)},
-                                TaxableAmount= new TaxableAmountType{Value=Convert.ToDecimal(43840.00)},
+                                TaxAmount = new TaxAmountType{currencyID="PEN",Value=Convert.ToDecimal(Cabecera[2].ToString())},
+                                TaxableAmount= new TaxableAmountType{Value=Convert.ToDecimal(Cabecera[6].ToString())},
                                 TaxCategory = new TaxCategoryType
                                 {
                                     ID= new IDType{ Value="S" },
-                                    TierRange= new TierRangeType{ Value="s" },
+                                    TierRange= new TierRangeType{ Value="S" },
                                     TaxExemptionReasonCode= new TaxExemptionReasonCodeType
                                     {
                                         Value=""
                                     },
                                     TaxScheme = new TaxSchemeType
                                     {
-                                        ID= new IDType{ Value="1000" },
-                                        Name= new NameType1{ Value="IGV" },
-                                        TaxTypeCode= new TaxTypeCodeType{ Value="VAT" }
+                                        ID= new IDType{ Value=Cabecera[3].ToString() },
+                                        Name= new NameType1{ Value=Cabecera[4].ToString() },
+                                        TaxTypeCode= new TaxTypeCodeType{ Value=Cabecera[5].ToString() }
                                     }
                                 },
                                 Percent=  new PercentType1{ Value=18 }
-                        }
-                    },
+                            }
+                        },
 
+                    };
+                    taxTotal.Add(taxTotalType);
                 }
-                };
+
+                #endregion
 
                 MonetaryTotalType legalMonetaryTotal = new MonetaryTotalType()
                 {
@@ -281,13 +291,16 @@
                     AccountingCustomerParty = accountingCustomerParty,
                     TaxTotal = taxTotal.ToArray(),
                     LegalMonetaryTotal = legalMonetaryTotal,
-
+                    ProfileID = new ProfileIDType
+                    {
+                        Value="0101"
+                    }
                 };
 
 
                 XmlSerializer xmlSerializer = new XmlSerializer(typeof(Invoice));
 
-                using (Stream stream = new FileStream(@"D:\"+ Doc.Ruc+"-"+ Doc .Local + "-" + Doc.TipoDocumento + "-"+Doc.NumDocumento+ ".xml", FileMode.Create))
+                using (Stream stream = new FileStream(@"D:\" + Doc.Ruc + "-" + Doc.Local + "-" + Doc.TipoDocumento + "-" + Doc.NumDocumento + ".xml", FileMode.Create))
                 using (XmlWriter xmlWriter = new XmlTextWriter(stream, Encoding.Unicode))
                 {
                     xmlSerializer.Serialize(xmlWriter, invoice);

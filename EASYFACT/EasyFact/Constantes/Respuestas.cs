@@ -46,5 +46,6 @@ namespace EasyFact.Constantes
     {
         public const string FormatoFecha = "yyyy-MM-dd";
         public const string FormatoNumerico = "###0.#0";
+        public const string FormatoDecimal_5 = "##0.####0";
     }
 }
