@@ -19,7 +19,14 @@ namespace EasyFact.Models
     {
         public string EN { get; set; }
         public string ENEX { get; set; }
-        public List<string> ITEM { get; set; }
+        public List<ITEM> ITEM { get; set; }
         public List<string> DI { get; set; }
+    }
+    public class ITEM
+    {
+        public string DE { get; set; }
+        public string DEDI { get; set; }
+        public string DEDR { get; set; }
+        public List<string> DEIM { get; set; }
     }
 }

@@ -48,4 +48,11 @@ namespace EasyFact.Constantes
         public const string FormatoNumerico = "###0.#0";
         public const string FormatoDecimal_5 = "##0.####0";
     }
+    public class ConstantesAtributo
+    {
+        public const string PESUNAT = "PE:SUNAT";
+        public const string CATALOGO16 = "urn:pe:gob:sunat:cpe:see:gem:catalogos:catalogo16";
+       // public const string FormatoNumerico = "###0.#0";
+        //public const string FormatoDecimal_5 = "##0.####0";
+    }
 }

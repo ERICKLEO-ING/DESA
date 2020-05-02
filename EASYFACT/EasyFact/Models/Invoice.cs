@@ -935,46 +935,44 @@ namespace EasyFact.Models
             //#endregion
             #region UBLExtensions
             writer.WriteStartElement("ext:UBLExtensions");
+            {
+                #region UBLExtension
+                writer.WriteStartElement("ext:UBLExtension");
+                {
+                    #region ExtensionContent
+                    writer.WriteStartElement("ext:ExtensionContent");
+                    writer.WriteEndElement();
+                    #endregion
+                }
+                writer.WriteEndElement();
+                #endregion
 
-            #region UBLExtension
-            //var ext2 = UblExtensions.Extension2.ExtensionContent.AdditionalInformation;
-            writer.WriteStartElement("ext:UBLExtension");
-
-            #region ExtensionContent
-            writer.WriteStartElement("ext:ExtensionContent");
-
-            writer.WriteEndElement();
-            #endregion
-
-            writer.WriteEndElement();
-            #endregion
-
-            #region UBLExtension
-            writer.WriteStartElement("ext:UBLExtension");
-            #region ExtensionContent
-            writer.WriteStartElement("ext:ExtensionContent");
-
-            // En esta zona va el certificado digital.
-
-            writer.WriteEndElement();
-            #endregion
-            writer.WriteEndElement();
-            #endregion
-
+                #region UBLExtension
+                writer.WriteStartElement("ext:UBLExtension");
+                {
+                    #region ExtensionContent
+                    writer.WriteStartElement("ext:ExtensionContent");
+                    { // En esta zona va el certificado digital.
+                    }
+                    writer.WriteEndElement();
+                    #endregion
+                }
+                writer.WriteEndElement();
+                #endregion
+            }
             writer.WriteEndElement();
             #endregion
             //********************************CERTIFICADO DIGITAL*****************************
 
-            //********************************************************************************************************
             #region UBLVersionID
             writer.WriteElementString("cbc:UBLVersionID", UBLVersionID.Value);
             writer.WriteElementString("cbc:CustomizationID", CustomizationID.Value);
 
             writer.WriteStartElement("cbc:ProfileID ");
             {
-                writer.WriteAttributeString("schemeName", "SUNAT:Identificador de Tipo de Operación");
-                writer.WriteAttributeString("schemeAgencyName", "PE:SUNAT");
-                writer.WriteAttributeString("schemeURI", "urn:pe:gob:sunat:cpe:see:gem: catalogos:catalogo17");
+                writer.WriteAttributeString("schemeName", ProfileID.schemeName);
+                writer.WriteAttributeString("schemeAgencyName", ProfileID.schemeAgencyName);
+                writer.WriteAttributeString("schemeURI", ProfileID.schemeURI);
                 writer.WriteString(ProfileID.Value);
             }
             writer.WriteEndElement();
@@ -986,63 +984,73 @@ namespace EasyFact.Models
 
             writer.WriteStartElement("cbc:InvoiceTypeCode");
             {
-                writer.WriteAttributeString("listAgencyName", "PE:SUNAT");
-                writer.WriteAttributeString("listName", "SUNAT:Identificador de Tipo de Documento");
-                writer.WriteAttributeString("listURI", "urn:pe:gob:sunat:cpe:see:gem:catalogos:catalogo01");
+                writer.WriteAttributeString("listAgencyName", InvoiceTypeCode.listAgencyName);
+                writer.WriteAttributeString("listName", InvoiceTypeCode.listName);
+                writer.WriteAttributeString("listURI", InvoiceTypeCode.listURI);
                 writer.WriteString(InvoiceTypeCode.Value);
             }
             writer.WriteEndElement();
 
             writer.WriteStartElement("cbc:Note");
             {
-                writer.WriteAttributeString("languageLocaleID", "1000");
+                writer.WriteAttributeString("languageLocaleID", Note[0].languageLocaleID);
                 writer.WriteString(Note[0].Value);
             }
             writer.WriteEndElement();
 
             writer.WriteStartElement("cbc:DocumentCurrencyCode");
             {
-                writer.WriteAttributeString("listID", "ISO 4217 Alpha");
-                writer.WriteAttributeString("listName", "Currency");
-                writer.WriteAttributeString("listAgencyName", "United Nations Economic Commission for Europe");
+                writer.WriteAttributeString("listID", DocumentCurrencyCode.listID);
+                writer.WriteAttributeString("listName", DocumentCurrencyCode.listName);
+                writer.WriteAttributeString("listAgencyName", DocumentCurrencyCode.listAgencyName);
                 writer.WriteString(DocumentCurrencyCode.Value);
             }
             writer.WriteEndElement();
 
             writer.WriteElementString("cbc:LineCountNumeric", LineCountNumeric.Value.ToString());
             #endregion
-            //*************************************************************************************************************************
+
+            //Fecha de inicio y vencimiento
             #region InvoicePeriod 
             writer.WriteStartElement("cac:InvoicePeriod");
-            writer.WriteElementString("cbc:StartDate", IssueDate.Value.ToString("yyyy-MM-dd"));
-            writer.WriteElementString("cbc:EndDate", IssueDate.Value.ToString("yyyy-MM-dd"));
+            {
+                writer.WriteElementString("cbc:StartDate", IssueDate.Value.ToString("yyyy-MM-dd"));
+                writer.WriteElementString("cbc:EndDate", IssueDate.Value.ToString("yyyy-MM-dd"));
+            }
             writer.WriteEndElement();
             #endregion
 
+            // orden de compra
             #region OrderReference 
             writer.WriteStartElement("cac:OrderReference");
-            writer.WriteElementString("cbc:ID", "XXXXXXXXXXX");
+            {
+                writer.WriteElementString("cbc:ID", OrderReference.ID.Value);
+            }
             writer.WriteEndElement();
             #endregion
 
+            //No se envia asi que no procede
             #region DespatchDocumentReference 
             //writer.WriteStartElement("cac:DespatchDocumentReference");
             //writer.WriteElementString("cbc:ID", "XXXXXXXXXXX");
             //writer.WriteEndElement();
             #endregion
 
+            //No se envia asi que no procede
             #region DespatchDocumentReference 
             //writer.WriteStartElement("cac:DespatchDocumentReference");
             //writer.WriteElementString("cbc:ID", "XXXXXXXXXXX");
             //writer.WriteEndElement();
             #endregion
 
+            //No se envia asi que no procede
             #region ContractDocumentReference 
             //writer.WriteStartElement("cac:DespatchDocumentReference");
             //writer.WriteElementString("cbc:ID", "XXXXXXXXXXX");
             //writer.WriteEndElement();
             #endregion
 
+            //No se envia asi que no procede 
             #region AdditionalDocumentReference 
             //writer.WriteStartElement("cac:DespatchDocumentReference");
             //writer.WriteElementString("cbc:ID", "XXXXXXXXXXX");
@@ -1051,87 +1059,83 @@ namespace EasyFact.Models
 
             #region Signature
             writer.WriteStartElement("cac:Signature");
-            writer.WriteElementString("cbc:ID", Signature[0].ID.Value);
+            {
+                writer.WriteElementString("cbc:ID", Signature[0].ID.Value);
 
-            #region SignatoryParty
+                #region SignatoryParty
+                writer.WriteStartElement("cac:SignatoryParty");
+                {
+                    #region PartyIdentification
+                    writer.WriteStartElement("cac:PartyIdentification");
+                    {
+                        writer.WriteElementString("cbc:ID", Signature[0].SignatoryParty.PartyIdentification[0].ID.Value);
+                    }
+                    writer.WriteEndElement();
+                    #endregion
 
-            writer.WriteStartElement("cac:SignatoryParty");
-            writer.WriteStartElement("cac:PartyIdentification");
-            writer.WriteElementString("cbc:ID", Signature[0].SignatoryParty.PartyIdentification[0].ID.Value);
-            writer.WriteEndElement();
+                    #region PartyName
+                    writer.WriteStartElement("cac:PartyName");
+                    {
+                        writer.WriteElementString("cbc:Name", Signature[0].SignatoryParty.PartyName[0].Name.Value);
+                    }
+                    writer.WriteEndElement();
+                    #endregion
+                }
+                writer.WriteEndElement();
+                #endregion
 
-            #region PartyName
-            writer.WriteStartElement("cac:PartyName");
+                #region DigitalSignatureAttachment
+                writer.WriteStartElement("cac:DigitalSignatureAttachment");
+                {
+                    writer.WriteStartElement("cac:ExternalReference");
+                    {
+                        writer.WriteElementString("cbc:URI", Signature[0].DigitalSignatureAttachment.ExternalReference.URI.Value);
+                    }
+                    writer.WriteEndElement();
+                }
+                writer.WriteEndElement();
+                #endregion
 
-            //writer.WriteStartElement("cbc:Name");
-            //writer.WriteCData(Signature.SignatoryParty.PartyName.Name);
-            //writer.WriteEndElement();
-            writer.WriteElementString("cbc:Name", Signature[0].SignatoryParty.PartyName[0].Name.Value);
-
-            writer.WriteEndElement();
-            #endregion
-
-            writer.WriteEndElement();
-            #endregion
-
-            #region DigitalSignatureAttachment
-            writer.WriteStartElement("cac:DigitalSignatureAttachment");
-
-            writer.WriteStartElement("cac:ExternalReference");
-            writer.WriteElementString("cbc:URI", Signature[0].DigitalSignatureAttachment.ExternalReference.URI.Value);
-            writer.WriteEndElement();
-
-            writer.WriteEndElement();
-            #endregion
-
+            }
             writer.WriteEndElement();
             #endregion
 
             //emisor
             #region AccountingSupplierParty
             writer.WriteStartElement("cac:AccountingSupplierParty");
+            {
+                #region Party
+                writer.WriteStartElement("cac:Party");
+                {
+                    #region PartyName
+                    writer.WriteStartElement("cac:PartyName");
+                    {
+                        writer.WriteElementString("cbc:Name", AccountingSupplierParty.Party.PartyName[0].Name.Value);
+                    }
+                    writer.WriteEndElement();
+                    #endregion
 
-            #region Party
-            writer.WriteStartElement("cac:Party");
+                    #region PartyTaxScheme
+                    writer.WriteStartElement("cac:PartyTaxScheme");
+                    {
+                        writer.WriteElementString("cbc:RegistrationName", AccountingSupplierParty.Party.PartyName[0].Name.Value);
 
-            #region PartyName
-            writer.WriteStartElement("cac:PartyName");
-            writer.WriteElementString("cbc:Name", AccountingSupplierParty.Party.PartyName[0].Name.Value);
-            writer.WriteEndElement();
-            #endregion
-
-            #region PartyTaxScheme
-            writer.WriteStartElement("cac:PartyTaxScheme");
-
-            writer.WriteElementString("cbc:RegistrationName", AccountingSupplierParty.Party.PartyName[0].Name.Value);
-
-            writer.WriteStartElement("cbc:CompanyID");
-
-            writer.WriteAttributeString("schemeID", "6");
-            writer.WriteAttributeString("schemeName", "SUNAT:Identificador de Documento de Identidad");
-            writer.WriteAttributeString("schemeAgencyName", "PE:SUNAT");
-            writer.WriteAttributeString("schemeURI", "urn:pe:gob:sunat:cpe:see:gem:catalogos:catalogo06");
-            writer.WriteString(AccountingSupplierParty.AdditionalAccountID[0].Value);
-
-            writer.WriteEndElement();
-
-            writer.WriteEndElement();
-            #endregion
-
-            //#region PartyLegalEntity
-            //writer.WriteStartElement("cac:PartyLegalEntity");
-            //writer.WriteElementString("cbc:RegistrationName",AccountingSupplierParty.Party.PartyLegalEntity[0].RegistrationName.Value);
-
-            //writer.WriteStartElement("cac:RegistrationAddress");
-            //writer.WriteElementString("cbc:AddressTypeCode", AccountingSupplierParty.Party.PostalAddress.ID.Value);
-            //writer.WriteEndElement();
-
-            //writer.WriteEndElement();
-            //#endregion
-
-            writer.WriteEndElement();
-            #endregion
-
+                        writer.WriteStartElement("cbc:CompanyID");
+                        {
+                            writer.WriteAttributeString("schemeID", AccountingSupplierParty.Party.PartyTaxScheme[0].CompanyID.schemeID);
+                            writer.WriteAttributeString("schemeName", AccountingSupplierParty.Party.PartyTaxScheme[0].CompanyID.schemeName);
+                            writer.WriteAttributeString("schemeAgencyName", AccountingSupplierParty.Party.PartyTaxScheme[0].CompanyID.schemeID);
+                            writer.WriteAttributeString("schemeURI", AccountingSupplierParty.Party.PartyTaxScheme[0].CompanyID.schemeURI);
+                            writer.WriteString(AccountingSupplierParty.Party.PartyTaxScheme[0].CompanyID.Value);
+                        }
+                        writer.WriteEndElement();
+                    }
+                    writer.WriteEndElement();
+                    #endregion
+                }
+                writer.WriteEndElement();
+                #endregion
+            }
             writer.WriteEndElement();
             #endregion
 
@@ -1560,7 +1564,7 @@ namespace EasyFact.Models
                                 writer.WriteAttributeString("listID", invoiceLine.Item.CommodityClassification[0].ItemClassificationCode.listID);
                                 writer.WriteAttributeString("listAgencyName", invoiceLine.Item.CommodityClassification[0].ItemClassificationCode.listAgencyName);
                                 writer.WriteAttributeString("listName", invoiceLine.Item.CommodityClassification[0].ItemClassificationCode.listName);
-                                writer.WriteString( invoiceLine.Item.AdditionalItemProperty[0].NameCode.Value);
+                                writer.WriteString(invoiceLine.Item.AdditionalItemProperty[0].NameCode.Value);
                             }
                             writer.WriteEndElement();
 

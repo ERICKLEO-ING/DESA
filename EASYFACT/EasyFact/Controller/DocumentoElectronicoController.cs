@@ -8,15 +8,18 @@
     using System.Threading.Tasks;
     using System.Xml;
     using System.Xml.Serialization;
+    using EasyFact.Constantes;
     using EasyFact.Models;
     public class DocumentoElectronicoController
     {
+        public IFormatProvider Formato { get; set; }
         public List<string> RecibeDocumentoElectronio(DocumentoElectronicoModel DocElec)
         {
             List<string> Respuesta;
             try
             {
-                Respuesta = ValidaTramaEN(DocElec.Trama.EN);
+                InvoiceLine(DocElec.Trama.ITEM, "PEN");
+                //Respuesta = ValidaTramaEN(DocElec.Trama.EN);
                 Respuesta = GeneraDocumentoXML(DocElec);
 
                 return Respuesta;
@@ -243,7 +246,7 @@
                     //Extension2 = new UBLExtension { ExtensionContent = new ExtensionContent { AdditionalInformation = new AdditionalInformation { AdditionalMonetaryTotals = new List<AdditionalMonetaryTotal>(), SunatTransaction = new SunatTransaction(), AdditionalProperties = new List<AdditionalProperty>() } } },
                 };
 
-                Invoice invoice = new Invoice()
+                Invoice Factura_Boleta = new Invoice()
                 {
                     UBLExtensions = uBLExtensions,
                     UBLVersionID = new UBLVersionIDType
@@ -293,7 +296,7 @@
                     LegalMonetaryTotal = legalMonetaryTotal,
                     ProfileID = new ProfileIDType
                     {
-                        Value="0101"
+                        Value = "0101"
                     }
                 };
 
@@ -303,18 +306,175 @@
                 using (Stream stream = new FileStream(@"D:\" + Doc.Ruc + "-" + Doc.Local + "-" + Doc.TipoDocumento + "-" + Doc.NumDocumento + ".xml", FileMode.Create))
                 using (XmlWriter xmlWriter = new XmlTextWriter(stream, Encoding.Unicode))
                 {
-                    xmlSerializer.Serialize(xmlWriter, invoice);
+                    xmlSerializer.Serialize(xmlWriter, Factura_Boleta);
                 }
 
                 return new List<string>();
             }
             catch (Exception ex)
             {
-
                 throw;
             }
         }
         #endregion
+
+        /// <summary>
+        /// Generacion de InvoiceLine
+        /// </summary>
+        /// <returns></returns>
+        private InvoiceLineType[] InvoiceLine(List<ITEM> ITEM_collection, string Moneda)
+        {
+            Moneda = "PEN";
+            //string PESUNAT = "PE:SUNAT";
+            List<InvoiceLineType> Items_Respuesta = new List<InvoiceLineType>(); ;
+            try
+            {
+                foreach (var item in ITEM_collection)
+                {
+                    #region InvoiceLine
+                    string[] DE = item.DE.Split('|');
+                    string[] DEDR = item.DEDR.Split('|');
+                    InvoiceLineType Linea = new InvoiceLineType();
+                    {
+                        //numero de orden del item
+                        Linea.ID = new IDType()
+                        {
+                            Value = DE[1].ToString()
+                        };
+                        //(InvoicedQuantity)cantidad de unidades del item
+                        Linea.InvoicedQuantity = new InvoicedQuantityType()
+                        {
+                            Value = Convert.ToDecimal(DE[4].ToString()),
+                            unitCode = DE[3].ToString(),
+                            unitCodeListID = "UN/ECE rec 20",
+                            unitCodeListAgencyName = "United Nations Economic Commission for Europe"
+                        };
+                        //(LineExtensionAmount)Valor de Venta del item
+                        Linea.LineExtensionAmount = new LineExtensionAmountType()
+                        {
+                            Value = Convert.ToDecimal(DE[5].ToString()),
+                            currencyID = Moneda
+                        };
+
+                        #region PricingReference
+                        Linea.PricingReference = new PricingReferenceType()
+                        {
+                            //AlternativeConditionPrice
+                            AlternativeConditionPrice = new PriceType[]
+                            {
+                               new PriceType()
+                               {
+                                   //(PriceAmount) precoi de venta unitario/ valor referencial
+                                   PriceAmount = new PriceAmountType()
+                                   {
+                                       Value=Convert.ToDecimal(DE[2].ToString()),
+                                       currencyID=Moneda
+                                   },
+                                   //(PriceTypeCode) codigo de tipo de precio
+                                   PriceTypeCode = new PriceTypeCodeType()
+                                   {
+                                       Value = DE[7].ToString(),
+                                       listName = "SUNAT:Indicador de Tipo de Precio",
+                                       listAgencyName = ConstantesAtributo.PESUNAT,
+                                       listURI = ConstantesAtributo.CATALOGO16
+                                   }
+                               }
+                            }
+                        };
+                        #endregion
+
+                        #region Delivery
+
+                        #endregion
+
+                        //Descuentos o Recargos
+                        #region AllowanceCharge
+                        Linea.AllowanceCharge = new AllowanceChargeType[]
+                        {
+                            new AllowanceChargeType()
+                            {
+                                ChargeIndicator =  new ChargeIndicatorType()
+                                {
+                                    Value= DEDR[1].ToString()=="true"?true :false
+                                },
+                                AllowanceChargeReasonCode = new AllowanceChargeReasonCodeType()
+                                {
+                                    Value=DEDR[3].ToString()
+                                },
+                                MultiplierFactorNumeric = new MultiplierFactorNumericType()
+                                {
+                                    Value = Convert.ToDecimal(DEDR[4].ToString())
+                                },
+                                Amount = new AmountType2()
+                                {
+                                    Value = Convert.ToDecimal(DEDR[2].ToString()),
+                                    currencyID= Moneda
+                                },
+                                BaseAmount = new BaseAmountType()
+                                {
+                                    Value = Convert.ToDecimal(DEDR[5].ToString()),
+                                    currencyID= Moneda
+                                }
+                            }
+                        };
+                        #endregion
+
+                        //Monto de tributo del item
+                        #region TaxTotal
+                        Linea.TaxTotal = new TaxTotalType[]
+                        {
+                            new TaxTotalType()
+                            {
+                                //Monto de tributo del ítem
+                                TaxAmount = new TaxAmountType()
+                                {
+                                     Value=Convert.ToDecimal(DE[8].ToString()),
+                                     currencyID = Moneda
+                                },
+                                TaxSubtotal = new TaxSubtotalType[]
+                                {
+                                    new TaxSubtotalType()
+                                    {
+                                        //Monto de la Operacion
+                                        TaxableAmount = new TaxableAmountType()
+                                        {
+                                             Value=Convert.ToDecimal(DE[9].ToString()),
+                                             currencyID = Moneda
+                                        },
+                                        //Monto de Tributo por Item
+                                        TaxAmount = new TaxAmountType()
+                                        {
+                                             Value=Convert.ToDecimal(DE[8].ToString()),
+                                             currencyID = Moneda
+                                        },
+
+                                        TaxCategory =  new TaxCategoryType()
+                                        {
+                                            ID = new IDType()
+                                            {
+                                                Value
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        };
+
+                        #endregion
+                    }
+                    #endregion
+
+
+
+                    Items_Respuesta.Add(Linea);
+                }
+                return Items_Respuesta.ToArray();
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
 
     }
 }
