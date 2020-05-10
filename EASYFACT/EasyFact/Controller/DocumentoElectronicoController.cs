@@ -18,7 +18,7 @@
             List<string> Respuesta;
             try
             {
-                InvoiceLine(DocElec.Trama.ITEM, "PEN");
+                // InvoiceLine(DocElec.Trama.ITEM, "PEN");
                 //Respuesta = ValidaTramaEN(DocElec.Trama.EN);
                 Respuesta = GeneraDocumentoXML(DocElec);
 
@@ -297,8 +297,9 @@
                     ProfileID = new ProfileIDType
                     {
                         Value = "0101"
-                    }
-                };
+                    },
+                    InvoiceLine = InvoiceLine(Doc.Trama.ITEM, "PEN")
+            };
 
 
                 XmlSerializer xmlSerializer = new XmlSerializer(typeof(Invoice));
@@ -335,6 +336,7 @@
                     string[] DE = item.DE.Split('|');
                     string[] DEDR = item.DEDR.Split('|');
                     List<string> DEIM_LIST = item.DEIM;//.Split('|');
+                    string[] DEDI = item.DEDI.Split('|');
                     InvoiceLineType Linea = new InvoiceLineType();
                     {
                         //numero de orden del item
@@ -468,6 +470,22 @@
                                                 listAgencyName = ConstantesAtributo.PESUNAT,
                                                 listName = "SUNAT:Codigo de Tipo de Afectación del IGV",
                                                 listURI=ConstantesAtributo.CATALOGO07
+                                            },
+                                            TaxScheme = new TaxSchemeType()
+                                            {
+                                                ID = new IDType()
+                                                {
+                                                    Value= DEIM[8].ToString(),
+
+                                                },
+                                                Name = new NameType1()
+                                                {
+                                                    Value= DEIM[9].ToString(),
+                                                },
+                                                TaxTypeCode = new TaxTypeCodeType()
+                                                {
+                                                    Value= DEIM[5].ToString()
+                                                }
                                             }
 
                                         }
@@ -478,6 +496,46 @@
                         }
                         Linea.TaxTotal = taxTotals.ToArray();
 
+                        #endregion
+
+                        #region Item
+                        Linea.Item = new ItemType()
+                        {
+                            Description = new DescriptionType[]
+                            {
+                                new DescriptionType()
+                                {
+                                    Value = DEDI[1].ToString()
+                                }
+                            },
+                            SellersItemIdentification = new ItemIdentificationType()
+                            {
+                                ID = new IDType()
+                                {
+                                    Value = DE[6].ToString()
+                                }
+                            },
+                            CommodityClassification = new CommodityClassificationType[]
+                            {
+                                new CommodityClassificationType()
+                                {
+                                    ItemClassificationCode = new ItemClassificationCodeType()
+                                    {
+                                        Value = DEDI[6].ToString()
+                                    }
+                                }
+                            }
+                        };
+                        #endregion
+
+                        #region Price
+                        Linea.Price = new PriceType()
+                        {
+                            PriceAmount = new PriceAmountType()
+                            {
+                                Value = Convert.ToDecimal(DE[8].ToString()),
+                            }
+                        };
                         #endregion
                     }
                     #endregion
