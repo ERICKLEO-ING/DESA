@@ -334,6 +334,7 @@
                     #region InvoiceLine
                     string[] DE = item.DE.Split('|');
                     string[] DEDR = item.DEDR.Split('|');
+                    List<string> DEIM_LIST = item.DEIM;//.Split('|');
                     InvoiceLineType Linea = new InvoiceLineType();
                     {
                         //numero de orden del item
@@ -421,15 +422,16 @@
 
                         //Monto de tributo del item
                         #region TaxTotal
-                        Linea.TaxTotal = new TaxTotalType[]
+                        List<TaxTotalType> taxTotals = new List<TaxTotalType>();
+                        foreach (var DEIM in DEIM_LIST)
                         {
-                            new TaxTotalType()
+                            TaxTotalType taxTotalType = new TaxTotalType()
                             {
                                 //Monto de tributo del ítem
                                 TaxAmount = new TaxAmountType()
                                 {
-                                     Value=Convert.ToDecimal(DE[8].ToString()),
-                                     currencyID = Moneda
+                                    Value = Convert.ToDecimal(DEIM[1].ToString()),
+                                    currencyID = Moneda
                                 },
                                 TaxSubtotal = new TaxSubtotalType[]
                                 {
@@ -438,13 +440,13 @@
                                         //Monto de la Operacion
                                         TaxableAmount = new TaxableAmountType()
                                         {
-                                             Value=Convert.ToDecimal(DE[9].ToString()),
+                                             Value=Convert.ToDecimal(DEIM[2].ToString()),
                                              currencyID = Moneda
                                         },
                                         //Monto de Tributo por Item
                                         TaxAmount = new TaxAmountType()
                                         {
-                                             Value=Convert.ToDecimal(DE[8].ToString()),
+                                             Value=Convert.ToDecimal(DEIM[3].ToString()),
                                              currencyID = Moneda
                                         },
 
@@ -452,19 +454,33 @@
                                         {
                                             ID = new IDType()
                                             {
-                                                Value
+                                                Value="S",
+                                                schemeID = ConstantesAtributo.UNECE5305,
+                                                schemeAgencyID ="6"
+                                            },
+                                            Percent= new PercentType1
+                                            {
+                                                Value = Convert.ToDecimal( DEIM[4].ToString())
+                                            },
+                                            TaxExemptionReasonCode= new TaxExemptionReasonCodeType()
+                                            {
+                                                Value =  DEIM[6].ToString(),
+                                                listAgencyName = ConstantesAtributo.PESUNAT,
+                                                listName = "SUNAT:Codigo de Tipo de Afectación del IGV",
+                                                listURI=ConstantesAtributo.CATALOGO07
                                             }
+
                                         }
                                     }
                                 }
-                            }
-                        };
+                            };
+                            taxTotals.Add(taxTotalType);
+                        }
+                        Linea.TaxTotal = taxTotals.ToArray();
 
                         #endregion
                     }
                     #endregion
-
-
 
                     Items_Respuesta.Add(Linea);
                 }
