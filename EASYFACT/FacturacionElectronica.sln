@@ -11,6 +11,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EasyFact", "EasyFact\EasyFa
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EasyFactWebService", "EasyFactWebService\EasyFactWebService.csproj", "{131C347E-596D-4823-83C3-8C4557822C23}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DOC", "DOC", "{7008E3CA-ED58-48CD-9613-B406A0C1F23C}"
+	ProjectSection(SolutionItems) = preProject
+		JSON.txt = JSON.txt
+		SUNAT_URL.txt = SUNAT_URL.txt
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
