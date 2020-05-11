@@ -1487,8 +1487,8 @@ namespace EasyFact.Models
                                             }
                                             writer.WriteEndElement();
 
-                                            if (!string.IsNullOrEmpty(item.TaxCategory.TierRange.Value))
-                                                writer.WriteElementString("cbc:TierRange", item.TaxCategory.TierRange.Value);
+                                            //if (!string.IsNullOrEmpty(item.TaxCategory.TierRange.Value))
+                                            //    writer.WriteElementString("cbc:TierRange", item.TaxCategory.TierRange.Value);
 
                                             #region TaxScheme
                                             writer.WriteStartElement("cac:TaxScheme");
@@ -1555,24 +1555,24 @@ namespace EasyFact.Models
                         #endregion
 
                         #region AdditionalItemProperty
-                        writer.WriteStartElement("cac:AdditionalItemProperty");
-                        {
-                            writer.WriteElementString("cbc:Name", invoiceLine.Item.AdditionalItemProperty[0].Name.Value);
+                        //writer.WriteStartElement("cac:AdditionalItemProperty");
+                        //{
+                        //    writer.WriteElementString("cbc:Name", invoiceLine.Item.AdditionalItemProperty[0].Name.Value);
 
-                            writer.WriteStartElement("cbc:NameCode");
-                            {
-                                writer.WriteAttributeString("listID", invoiceLine.Item.CommodityClassification[0].ItemClassificationCode.listID);
-                                writer.WriteAttributeString("listAgencyName", invoiceLine.Item.CommodityClassification[0].ItemClassificationCode.listAgencyName);
-                                writer.WriteAttributeString("listName", invoiceLine.Item.CommodityClassification[0].ItemClassificationCode.listName);
-                                writer.WriteString(invoiceLine.Item.AdditionalItemProperty[0].NameCode.Value);
-                            }
-                            writer.WriteEndElement();
+                        //    writer.WriteStartElement("cbc:NameCode");
+                        //    {
+                        //        writer.WriteAttributeString("listID", invoiceLine.Item.CommodityClassification[0].ItemClassificationCode.listID);
+                        //        writer.WriteAttributeString("listAgencyName", invoiceLine.Item.CommodityClassification[0].ItemClassificationCode.listAgencyName);
+                        //        writer.WriteAttributeString("listName", invoiceLine.Item.CommodityClassification[0].ItemClassificationCode.listName);
+                        //        writer.WriteString(invoiceLine.Item.AdditionalItemProperty[0].NameCode.Value);
+                        //    }
+                        //    writer.WriteEndElement();
 
-                            writer.WriteElementString("cbc:Value", invoiceLine.Item.AdditionalItemProperty[0].Value.Value);
-                            writer.WriteElementString("cbc:ValueQualifier", invoiceLine.Item.AdditionalItemProperty[0].ValueQualifier[0].Value);
+                        //    writer.WriteElementString("cbc:Value", invoiceLine.Item.AdditionalItemProperty[0].Value.Value);
+                        //    writer.WriteElementString("cbc:ValueQualifier", invoiceLine.Item.AdditionalItemProperty[0].ValueQualifier[0].Value);
 
-                        }
-                        writer.WriteEndElement();
+                        //}
+                        //writer.WriteEndElement();
                         #endregion
                     }
                     writer.WriteEndElement();

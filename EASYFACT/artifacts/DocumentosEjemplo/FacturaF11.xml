@@ -42,6 +42,7 @@
 			</cac:ExternalReference>
 		</cac:DigitalSignatureAttachment>
 	</cac:Signature>
+  
 	<cac:AccountingSupplierParty>
 		<cbc:CustomerAssignedAccountID>XXXXXXXXXX</cbc:CustomerAssignedAccountID>
 		<cbc:AdditionalAccountID>6</cbc:AdditionalAccountID>
@@ -71,6 +72,7 @@
 			</cac:PartyLegalEntity>
 		</cac:Party>
 	</cac:AccountingCustomerParty>
+  
 	<cac:TaxTotal>
 		<cbc:TaxAmount currencyID="PEN">73220.34</cbc:TaxAmount>
 		<cac:TaxSubtotal>
@@ -84,9 +86,11 @@
 			</cac:TaxCategory>
 		</cac:TaxSubtotal>
 	</cac:TaxTotal>
+  
 	<cac:LegalMonetaryTotal>
 		<cbc:PayableAmount currencyID="PEN">480000.00</cbc:PayableAmount>
 	</cac:LegalMonetaryTotal>
+  
 	<cac:InvoiceLine>
 		<cbc:ID>1</cbc:ID>
 		<cbc:InvoicedQuantity unitCode="NIU">2000</cbc:InvoicedQuantity>
@@ -189,4 +193,5 @@
 			<cbc:PriceAmount currencyID="PEN">166.10</cbc:PriceAmount>
 		</cac:Price>
 	</cac:InvoiceLine>
+  
 </Invoice>

@@ -6,7 +6,6 @@ D:\DESARROLLO\FACTURACION_ELECTRONICA\SOURCE\EASYFACT\EasyFact\obj\Debug\EasyFac
 D:\DESARROLLO\FACTURACION_ELECTRONICA\SOURCE\EASYFACT\EasyFact\obj\Debug\EasyFact.csprojAssemblyReference.cache
 C:\Users\ERICK\Source\Repos\ERICKLEO-ING\DESA\EASYFACT\EasyFact\bin\Debug\EasyFact.dll
 C:\Users\ERICK\Source\Repos\ERICKLEO-ING\DESA\EASYFACT\EasyFact\bin\Debug\EasyFact.pdb
-C:\Users\ERICK\Source\Repos\ERICKLEO-ING\DESA\EASYFACT\EasyFact\obj\Debug\EasyFact.csprojAssemblyReference.cache
 C:\Users\ERICK\Source\Repos\ERICKLEO-ING\DESA\EASYFACT\EasyFact\obj\Debug\EasyFact.csproj.CoreCompileInputs.cache
 C:\Users\ERICK\Source\Repos\ERICKLEO-ING\DESA\EASYFACT\EasyFact\obj\Debug\EasyFact.dll
 C:\Users\ERICK\Source\Repos\ERICKLEO-ING\DESA\EASYFACT\EasyFact\obj\Debug\EasyFact.pdb
