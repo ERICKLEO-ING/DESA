@@ -1,1 +1,0 @@
-java -jar facturadorApp-1.3.1.jar server prod.yaml
