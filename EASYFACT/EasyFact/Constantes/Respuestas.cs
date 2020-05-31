@@ -51,8 +51,10 @@ namespace EasyFact.Constantes
     public class ConstantesAtributo
     {
         public const string PESUNAT = "PE:SUNAT";
-        public const string CATALOGO16 = "urn:pe:gob:sunat:cpe:see:gem:catalogos:catalogo16";
+
+        public const string CATALOGO06 = "urn:pe:gob:sunat:cpe:see:gem:catalogos:catalogo06";
         public const string CATALOGO07 = "urn:pe:gob:sunat:cpe:see:gem:catalogos:catalogo07";
+        public const string CATALOGO16 = "urn:pe:gob:sunat:cpe:see:gem:catalogos:catalogo16";
         public const string UNECE5305 = "UN/ECE 5305";
         // public const string FormatoNumerico = "###0.#0";
         //public const string FormatoDecimal_5 = "##0.####0";

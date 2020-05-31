@@ -9,3 +9,14 @@ D:\DESARROLLO\FACTURACION_ELECTRONICA\SOURCE\EASYFACT\ErickOrlando.FirmadoSunat\
 D:\DESARROLLO\FACTURACION_ELECTRONICA\SOURCE\EASYFACT\ErickOrlando.FirmadoSunat\obj\Debug\ErickOrlando.FirmadoSunat.csproj.CopyComplete
 D:\DESARROLLO\FACTURACION_ELECTRONICA\SOURCE\EASYFACT\ErickOrlando.FirmadoSunat\obj\Debug\ErickOrlando.FirmadoSunat.dll
 D:\DESARROLLO\FACTURACION_ELECTRONICA\SOURCE\EASYFACT\ErickOrlando.FirmadoSunat\obj\Debug\ErickOrlando.FirmadoSunat.pdb
+C:\Users\ERICK\Source\Repos\ERICKLEO-ING\DESA\EASYFACT\ErickOrlando.FirmadoSunat\bin\Debug\ErickOrlando.FirmadoSunat.dll.config
+C:\Users\ERICK\Source\Repos\ERICKLEO-ING\DESA\EASYFACT\ErickOrlando.FirmadoSunat\bin\Debug\ErickOrlando.FirmadoSunat.dll
+C:\Users\ERICK\Source\Repos\ERICKLEO-ING\DESA\EASYFACT\ErickOrlando.FirmadoSunat\bin\Debug\ErickOrlando.FirmadoSunat.pdb
+C:\Users\ERICK\Source\Repos\ERICKLEO-ING\DESA\EASYFACT\ErickOrlando.FirmadoSunat\bin\Debug\Ionic.Zip.dll
+C:\Users\ERICK\Source\Repos\ERICKLEO-ING\DESA\EASYFACT\ErickOrlando.FirmadoSunat\bin\Debug\Microsoft.Web.Services3.dll
+C:\Users\ERICK\Source\Repos\ERICKLEO-ING\DESA\EASYFACT\ErickOrlando.FirmadoSunat\bin\Debug\Ionic.Zip.xml
+C:\Users\ERICK\Source\Repos\ERICKLEO-ING\DESA\EASYFACT\ErickOrlando.FirmadoSunat\obj\Debug\ErickOrlando.FirmadoSunat.csprojAssemblyReference.cache
+C:\Users\ERICK\Source\Repos\ERICKLEO-ING\DESA\EASYFACT\ErickOrlando.FirmadoSunat\obj\Debug\ErickOrlando.FirmadoSunat.csproj.CoreCompileInputs.cache
+C:\Users\ERICK\Source\Repos\ERICKLEO-ING\DESA\EASYFACT\ErickOrlando.FirmadoSunat\obj\Debug\ErickOrlando.FirmadoSunat.csproj.CopyComplete
+C:\Users\ERICK\Source\Repos\ERICKLEO-ING\DESA\EASYFACT\ErickOrlando.FirmadoSunat\obj\Debug\ErickOrlando.FirmadoSunat.dll
+C:\Users\ERICK\Source\Repos\ERICKLEO-ING\DESA\EASYFACT\ErickOrlando.FirmadoSunat\obj\Debug\ErickOrlando.FirmadoSunat.pdb

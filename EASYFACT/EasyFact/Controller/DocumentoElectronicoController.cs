@@ -13,6 +13,7 @@
     public class DocumentoElectronicoController
     {
         public IFormatProvider Formato { get; set; }
+        string Moneda = "PEN";
         public List<string> RecibeDocumentoElectronio(DocumentoElectronicoModel DocElec)
         {
             List<string> Respuesta;
@@ -54,47 +55,161 @@
         {
             try
             {
-                #region EN-ENEX
-
                 string[] Cabecera = Doc.Trama.EN.Split('|');
-                //Falta Validar signatureCac Tipo de firma
-                // para la firma
-                SignatureType[] signatureCac = new SignatureType[]
-{
-                    new SignatureType()
+
+                XmlDocument xmlDoc = new XmlDocument();
+                XmlElement xmlElement = xmlDoc.CreateElement("AdditionalInformation", "urn:sunat:names:specification:ubl:peru:schema:xsd:SunatAggregateComponents-1");
+                UBLExtensionType[] uBLExtensions = new UBLExtensionType[]
                 {
-                    ID = new IDType { Value= "LlamaSign" },
-                    SignatoryParty = new PartyType
+                    new UBLExtensionType
                     {
-                        PartyIdentification = new PartyIdentificationType[]
+                        ExtensionContent = xmlElement
+                    },
+                    new UBLExtensionType()
+                    {
+                        ExtensionContent = xmlElement
+                    },
+                };
+
+                Invoice Factura_Boleta = new Invoice();
+                {
+                    Factura_Boleta.UBLExtensions = uBLExtensions;
+                    Factura_Boleta.UBLVersionID = new UBLVersionIDType
+                    {
+                        Value = "2.1"
+                    };
+                    Factura_Boleta.ID = new IDType
+                    {
+                        Value = "F001-1"
+                    };
+                    Factura_Boleta.CustomizationID = new CustomizationIDType
+                    {
+                        Value = "2.0"
+                    };
+                    Factura_Boleta.IssueDate = new IssueDateType
+                    {
+                        Value = Convert.ToDateTime("2017-05-14 15:42:20")
+                    };
+                    Factura_Boleta.IssueTime = new IssueTimeType
+                    {
+                        Value = Convert.ToDateTime("2017-05-14 15:42:20"),
+                    };
+                    Factura_Boleta.DueDate = new DueDateType
+                    {
+                        Value = Convert.ToDateTime("2017-05-15 15:42:20"),
+                    };
+                    Factura_Boleta.InvoiceTypeCode = new InvoiceTypeCodeType
+                    {
+                        Value = "01"
+                    };
+                    Factura_Boleta.Note = new List<NoteType>
+                    {
+                        new NoteType { Value = "SETENTA Y UN MIL TRESCIENTOS CINCUENTICUATRO Y 99/100" }
+                    }.ToArray();
+                    Factura_Boleta.DocumentCurrencyCode = new DocumentCurrencyCodeType
+                    {
+                        Value = "PEN"
+                    };
+                    Factura_Boleta.LineCountNumeric = new LineCountNumericType
+                    {
+                        Value = 1
+                    };
+                    Factura_Boleta.ProfileID = new ProfileIDType
+                    {
+                        Value = "0101"
+                    };
+                    Factura_Boleta.OrderReference = new OrderReferenceType
+                    {
+                        ID = new IDType()
                         {
-                            new PartyIdentificationType
+                            Value="XXXXX"
+                        }
+                    };
+
+                    Factura_Boleta.Signature = SignatureTypes(Doc.Trama);
+                    Factura_Boleta.AccountingSupplierParty = SupplierPartyType(Doc.Trama);
+                    Factura_Boleta.AccountingCustomerParty = CustomerPartyType(Doc.Trama);
+                    Factura_Boleta.AllowanceCharge = AllowanceChargeTypes();
+                    Factura_Boleta.TaxTotal = TaxTotalType(Doc.Trama);
+                    Factura_Boleta.LegalMonetaryTotal = MonetaryTotal(Doc.Trama);
+                    Factura_Boleta.InvoiceLine = InvoiceLine(Doc.Trama.ITEM);
+                }
+
+                XmlSerializer xmlSerializer = new XmlSerializer(typeof(Invoice));
+
+                using (Stream stream = new FileStream(@"D:\" + Doc.Ruc + "-" + Doc.Local + "-" + Doc.TipoDocumento + "-" + Doc.NumDocumento + ".xml", FileMode.Create))
+                using (XmlWriter xmlWriter = new XmlTextWriter(stream, Encoding.Unicode))
+                {
+                    xmlSerializer.Serialize(xmlWriter, Factura_Boleta);
+                }
+
+                return new List<string>();
+            }
+            catch (Exception ex)
+            {
+                throw;
+            }
+        }
+        #endregion
+
+        #region Signature
+        private SignatureType[] SignatureTypes(TramaDocumento Doc)
+        {
+            try
+            {
+                string[] EN = Doc.EN.Split('|');
+                //informacion adicional a la firma
+                SignatureType[] signatureCac = new SignatureType[]
+                {
+                    new SignatureType()
+                    {
+                        ID = new IDType { Value= "LlamaSign" },
+                        SignatoryParty = new PartyType
+                        {
+                            PartyIdentification = new PartyIdentificationType[]
                             {
-                                ID = new IDType
+                                new PartyIdentificationType
                                 {
-                                    schemeID = Cabecera[8].ToString(),
-                                    Value = Cabecera[8].ToString()
+                                    ID = new IDType
+                                    {
+                                        schemeID = EN[8].ToString(),
+                                        Value = EN[8].ToString()
+                                    }
+                                }
+                            },
+                            PartyName = new PartyNameType[]
+                            {
+                                new PartyNameType
+                                {
+                                    Name = new NameType1{ Value=EN[10].ToString() }
                                 }
                             }
                         },
-                        PartyName = new PartyNameType[]
+                        DigitalSignatureAttachment = new AttachmentType
                         {
-                            new PartyNameType
+                            ExternalReference = new ExternalReferenceType
                             {
-                                Name = new NameType1{ Value=Cabecera[10].ToString() }
+                                URI = new URIType { Value= EN[8].ToString() }
                             }
                         }
-                    },
-                    DigitalSignatureAttachment = new AttachmentType
-                    {
-                        ExternalReference = new ExternalReferenceType
-                        {
-                            URI = new URIType { Value= Cabecera[8].ToString() }
-                        }
                     }
-                }
-};
+                };
+                return signatureCac;
+            }
+            catch (Exception)
+            {
 
+                throw;
+            }
+        }
+        #endregion
+
+        #region AccountingSupplierParty
+        private SupplierPartyType SupplierPartyType(TramaDocumento Doc)
+        {
+            try
+            {
+                string[] EN = Doc.EN.Split('|');
                 //proveedor
                 SupplierPartyType accountingSupplierParty = new SupplierPartyType()
                 {
@@ -106,7 +221,7 @@
                             {
                                 RegistrationName = new RegistrationNameType
                                 {
-                                    Value=Cabecera[10].ToString()
+                                    Value = EN[10].ToString()
                                 },
                             }
                         },
@@ -114,14 +229,39 @@
                         {
                             new PartyNameType
                             {
-                                Name = new NameType1{Value=Cabecera[11].ToString()}
+                                Name = new NameType1 { Value = EN[11].ToString() }
+                            }
+                        },
+                        PartyTaxScheme = new PartyTaxSchemeType[]
+                        {
+                            new PartyTaxSchemeType
+                            {
+                                RegistrationName = new RegistrationNameType()
+                                {
+                                    Value=EN[11].ToString()
+                                },
+                                CompanyID = new CompanyIDType()
+                                {
+                                    Value = EN[17].ToString(),
+                                    schemeID=EN[17].ToString(),
+                                    schemeName="SUNAT:Identificador de Documento de Identidad",
+                                    schemeAgencyName = ConstantesAtributo.PESUNAT,
+                                    schemeURI= ConstantesAtributo.CATALOGO06
+                                },
+                                RegistrationAddress = new AddressType
+                                {
+                                    AddressTypeCode = new AddressTypeCodeType()
+                                    {
+                                        Value="0000"
+                                    }
+                                }
                             }
                         },
                         PostalAddress = new AddressType
                         {
                             ID = new IDType { Value = "0001" },
-                            District = new DistrictType { Value = Cabecera[16].ToString() },
-                            CityName = new CityNameType { Value = Cabecera[14].ToString() },
+                            District = new DistrictType { Value = EN[16].ToString() },
+                            CityName = new CityNameType { Value = EN[14].ToString() },
                             StreetName = new StreetNameType { Value = "" },
                             CitySubdivisionName = new CitySubdivisionNameType { Value = "" },
                             Country = new CountryType
@@ -134,11 +274,27 @@
                     },
                     AdditionalAccountID = new AdditionalAccountIDType[]
                     {
-                        new AdditionalAccountIDType{ Value=Cabecera[8].ToString()}
+                        new AdditionalAccountIDType{ Value=EN[8].ToString()}
                     },
-                    CustomerAssignedAccountID = new CustomerAssignedAccountIDType { Value = Cabecera[8].ToString() }
+                    CustomerAssignedAccountID = new CustomerAssignedAccountIDType { Value = EN[8].ToString() }
                 };
+                return accountingSupplierParty;
+            }
+            catch (Exception)
+            {
 
+                throw;
+            }
+        }
+        #endregion
+
+        // informacion del cliente
+        #region AccountingSupplierParty
+        private CustomerPartyType CustomerPartyType(TramaDocumento Doc)
+        {
+            try
+            {
+                string[] EN = Doc.EN.Split('|');
                 //cliente
                 CustomerPartyType accountingCustomerParty = new CustomerPartyType()
                 {
@@ -150,7 +306,7 @@
                             {
                                 RegistrationName = new RegistrationNameType
                                 {
-                                    Value=Cabecera[19].ToString(),
+                                    Value=EN[19].ToString(),
                                 }
                             }
                         },
@@ -158,7 +314,7 @@
                         {
                             new PartyNameType
                             {
-                                Name = new NameType1{Value=Cabecera[19].ToString()}
+                                Name = new NameType1{Value=EN[19].ToString()}
                             }
                         },
                         PostalAddress = new AddressType
@@ -178,40 +334,124 @@
                     },
                     AdditionalAccountID = new AdditionalAccountIDType[]
                     {
-                        new AdditionalAccountIDType{ Value=Cabecera[18].ToString()}
+                        new AdditionalAccountIDType{ Value=EN[18].ToString()}
                     },
-                    CustomerAssignedAccountID = new CustomerAssignedAccountIDType { Value = Cabecera[18].ToString() }
+                    CustomerAssignedAccountID = new CustomerAssignedAccountIDType { Value = EN[18].ToString() }
                 };
-                #endregion
+                return accountingCustomerParty;
+            }
+            catch (Exception)
+            {
 
-                #region Montos - IGV - INAFECTOS - OTROS (cac:TaxTotal)
+                throw;
+            }
+        }
+        #endregion
+
+        //Descuentos o Recargos globales
+        #region AllowanceCharge
+        private AllowanceChargeType[] AllowanceChargeTypes()
+        {
+            try
+            {
+                List<AllowanceChargeType> AllowanceCharge = new List<AllowanceChargeType>
+                {
+                    //new AllowanceChargeType()
+                    //{
+                    //   ChargeIndicator = new ChargeIndicatorType()
+                    //   {
+                    //       Value = DEDR[1].ToString() == "true" ? true : false
+                    //   },
+                    //                   AllowanceChargeReasonCode = new AllowanceChargeReasonCodeType()
+                    //                   {
+                    //                       Value = DEDR[3].ToString()
+                    //                   },
+                    //                   MultiplierFactorNumeric = new MultiplierFactorNumericType()
+                    //                   {
+                    //                       Value = Convert.ToDecimal(DEDR[4].ToString())
+                    //                   },
+                    //                   Amount = new AmountType2()
+                    //                   {
+                    //                       Value = Convert.ToDecimal(DEDR[2].ToString()),
+                    //                       currencyID = Moneda
+                    //                   },
+                    //                   BaseAmount = new BaseAmountType()
+                    //                   {
+                    //                       Value = Convert.ToDecimal(DEDR[5].ToString()),
+                    //                       currencyID = Moneda
+                    //                   }
+                    //}
+                };
+                return AllowanceCharge.ToArray();
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+
+        #endregion
+
+        //
+        #region TaxTotal
+        private TaxTotalType[] TaxTotalType(TramaDocumento Doc)
+        {
+            try
+            {
                 //Impuestos
                 List<TaxTotalType> taxTotal = new List<TaxTotalType>();
-                foreach (var Impuestos in Doc.Trama.DI)
+                foreach (var Impuestos in Doc.DI)
                 {
-                    string[] IMP = Impuestos.Split('|');
+                    string[] DI = Impuestos.Split('|');
                     TaxTotalType taxTotalType = new TaxTotalType()
                     {
-                        TaxAmount = new TaxAmountType { currencyID = "PEN", Value = Convert.ToDecimal(Cabecera[1].ToString()) },
+                        TaxAmount = new TaxAmountType 
+                        { 
+                            currencyID = "PEN", 
+                            Value = Convert.ToDecimal(DI[1].ToString())
+                        },
                         TaxSubtotal = new TaxSubtotalType[]
                         {
                             new TaxSubtotalType
                             {
-                                TaxAmount = new TaxAmountType{currencyID="PEN",Value=Convert.ToDecimal(Cabecera[2].ToString())},
-                                TaxableAmount= new TaxableAmountType{Value=Convert.ToDecimal(Cabecera[6].ToString())},
+                                TaxAmount = new TaxAmountType
+                                {
+                                    currencyID="PEN",
+                                    Value=Convert.ToDecimal(DI[2].ToString())
+                                },
+                                TaxableAmount= new TaxableAmountType
+                                {
+                                    Value=Convert.ToDecimal(DI[6].ToString())
+                                },
                                 TaxCategory = new TaxCategoryType
                                 {
-                                    ID= new IDType{ Value="S" },
-                                    TierRange= new TierRangeType{ Value="S" },
+                                    ID= new IDType
+                                    { 
+                                        Value="S" 
+                                    },
+                                    TierRange= new TierRangeType
+                                    { 
+                                        Value="S" 
+                                    },
                                     TaxExemptionReasonCode= new TaxExemptionReasonCodeType
                                     {
                                         Value=""
                                     },
                                     TaxScheme = new TaxSchemeType
                                     {
-                                        ID= new IDType{ Value=Cabecera[3].ToString() },
-                                        Name= new NameType1{ Value=Cabecera[4].ToString() },
-                                        TaxTypeCode= new TaxTypeCodeType{ Value=Cabecera[5].ToString() }
+                                        ID= new IDType
+                                        { 
+                                            Value=DI[3].ToString() 
+                                        },
+                                        Name= new NameType1
+                                        { 
+                                            Value=DI[4].ToString() 
+                                        },
+                                        TaxTypeCode= new TaxTypeCodeType
+                                        { 
+                                            Value=DI[5].ToString() 
+                                        }
                                     }
                                 },
                                 Percent=  new PercentType1{ Value=18 }
@@ -221,109 +461,85 @@
                     };
                     taxTotal.Add(taxTotalType);
                 }
-
-                #endregion
-
-                MonetaryTotalType legalMonetaryTotal = new MonetaryTotalType()
-                {
-                    PayableAmount = new PayableAmountType { currencyID = "PEN", Value = 15485 },
-                    AllowanceTotalAmount = new AllowanceTotalAmountType { currencyID = "PEN", Value = 15424 },
-                    ChargeTotalAmount = new ChargeTotalAmountType { currencyID = "PEN", Value = 5555 }
-                };
-                XmlDocument xmlDoc = new XmlDocument();
-                XmlElement xmlElement = xmlDoc.CreateElement("AdditionalInformation", "urn:sunat:names:specification:ubl:peru:schema:xsd:SunatAggregateComponents-1");
-                UBLExtensionType[] uBLExtensions = new UBLExtensionType[]
-                {
-                    new UBLExtensionType
-                    {
-                        ExtensionContent = xmlElement
-                    },
-                    new UBLExtensionType()
-                    {
-                        ExtensionContent = xmlElement
-                    },
-                    //Extension1 = new UBLExtension { ExtensionContent = new ExtensionContent { AdditionalInformation = new AdditionalInformation { AdditionalMonetaryTotals = new List<AdditionalMonetaryTotal>(), SunatTransaction = new SunatTransaction(), AdditionalProperties = new List<AdditionalProperty>() } } },
-                    //Extension2 = new UBLExtension { ExtensionContent = new ExtensionContent { AdditionalInformation = new AdditionalInformation { AdditionalMonetaryTotals = new List<AdditionalMonetaryTotal>(), SunatTransaction = new SunatTransaction(), AdditionalProperties = new List<AdditionalProperty>() } } },
-                };
-
-                Invoice Factura_Boleta = new Invoice()
-                {
-                    UBLExtensions = uBLExtensions,
-                    UBLVersionID = new UBLVersionIDType
-                    {
-                        Value = "2.1"
-                    },
-                    ID = new IDType
-                    {
-                        Value = "F001-1"
-                    },
-                    CustomizationID = new CustomizationIDType
-                    {
-                        Value = "2.0"
-                    },
-                    IssueDate = new IssueDateType
-                    {
-                        Value = Convert.ToDateTime("2017-05-14 15:42:20")
-                    },
-                    IssueTime = new IssueTimeType
-                    {
-                        Value = Convert.ToDateTime("2017-05-14 15:42:20"),
-                    },
-                    DueDate = new DueDateType
-                    {
-                        Value = Convert.ToDateTime("2017-05-15 15:42:20"),
-                    },
-                    InvoiceTypeCode = new InvoiceTypeCodeType
-                    {
-                        Value = "01"
-                    },
-                    Note = new List<NoteType>
-                    {
-                        new NoteType {Value="SETENTA Y UN MIL TRESCIENTOS CINCUENTICUATRO Y 99/100"}
-                    }.ToArray(),
-                    DocumentCurrencyCode = new DocumentCurrencyCodeType
-                    {
-                        Value = "PEN"
-                    },
-                    LineCountNumeric = new LineCountNumericType
-                    {
-                        Value = 1
-                    },
-                    Signature = signatureCac,
-                    AccountingSupplierParty = accountingSupplierParty,
-                    AccountingCustomerParty = accountingCustomerParty,
-                    TaxTotal = taxTotal.ToArray(),
-                    LegalMonetaryTotal = legalMonetaryTotal,
-                    ProfileID = new ProfileIDType
-                    {
-                        Value = "0101"
-                    },
-                    InvoiceLine = InvoiceLine(Doc.Trama.ITEM, "PEN")
-            };
-
-
-                XmlSerializer xmlSerializer = new XmlSerializer(typeof(Invoice));
-
-                using (Stream stream = new FileStream(@"D:\" + Doc.Ruc + "-" + Doc.Local + "-" + Doc.TipoDocumento + "-" + Doc.NumDocumento + ".xml", FileMode.Create))
-                using (XmlWriter xmlWriter = new XmlTextWriter(stream, Encoding.Unicode))
-                {
-                    xmlSerializer.Serialize(xmlWriter, Factura_Boleta);
-                }
-
-                return new List<string>();
+                return taxTotal.ToArray();
             }
-            catch (Exception ex)
+            catch (Exception)
             {
+
                 throw;
             }
         }
         #endregion
 
+        //Valores totales del documento
+        #region LegalMonetaryTotal
+        /// <summary>
+        /// Generacion de MonetaryTotal
+        /// </summary>
+        /// <param name="DOC"></param>
+        /// <returns></returns>
+        private MonetaryTotalType MonetaryTotal(TramaDocumento DOC)
+        {
+            string[] ENEX = DOC.ENEX.Split('|');
+            string[] EN = DOC.EN.Split('|');
+            try
+            {
+                MonetaryTotalType legalMonetaryTotal = new MonetaryTotalType()
+                {
+                    //Total valor de venta 
+                    LineExtensionAmount = new LineExtensionAmountType
+                    {
+                        Value = Convert.ToDecimal(EN[21].ToString()),
+                        currencyID = Moneda
+                    },
+                    //Total precio de venta (incluye impuestos)
+                    TaxInclusiveAmount = new TaxInclusiveAmountType
+                    {
+                        Value = Convert.ToDecimal(ENEX[9].ToString()),
+                        currencyID = Moneda
+                    },
+                    //Monto total de Descuentos
+                    AllowanceTotalAmount = new AllowanceTotalAmountType
+                    {
+                        Value = Convert.ToDecimal(EN[23].ToString()),
+                        currencyID = Moneda
+                    },
+                    //Otros Cargos del Comprobante
+                    ChargeTotalAmount = new ChargeTotalAmountType
+                    {
+                        Value = Convert.ToDecimal(EN[24].ToString()),
+                        currencyID = Moneda
+                    },
+                    //Total de Anticipos
+                    PrepaidAmount = new PrepaidAmountType
+                    {
+                        Value = 0,
+                        currencyID = Moneda
+                    },
+                    //Importe total de la venta
+                    PayableAmount = new PayableAmountType
+                    {
+                        Value = Convert.ToDecimal(EN[25].ToString()),
+                    }
+
+                };
+                return legalMonetaryTotal;
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+        #endregion
+
+        //Informacion de las lineas del documento
+        #region InvoiceLine
         /// <summary>
         /// Generacion de InvoiceLine
         /// </summary>
         /// <returns></returns>
-        private InvoiceLineType[] InvoiceLine(List<ITEM> ITEM_collection, string Moneda)
+        private InvoiceLineType[] InvoiceLine(List<ITEM> ITEM_collection)
         {
             Moneda = "PEN";
             //string PESUNAT = "PE:SUNAT";
@@ -390,7 +606,7 @@
 
                         #endregion
 
-                        //Descuentos o Recargos
+                        //Descuentos o Recargos de la linea
                         #region AllowanceCharge
                         Linea.AllowanceCharge = new AllowanceChargeType[]
                         {
@@ -425,8 +641,9 @@
                         //Monto de tributo del item
                         #region TaxTotal
                         List<TaxTotalType> taxTotals = new List<TaxTotalType>();
-                        foreach (var DEIM in DEIM_LIST)
+                        foreach (var DEIM_Item in DEIM_LIST)
                         {
+                            string[] DEIM = DEIM_Item.Split('|');
                             TaxTotalType taxTotalType = new TaxTotalType()
                             {
                                 //Monto de tributo del ítem
@@ -435,6 +652,7 @@
                                     Value = Convert.ToDecimal(DEIM[1].ToString()),
                                     currencyID = Moneda
                                 },
+
                                 TaxSubtotal = new TaxSubtotalType[]
                                 {
                                     new TaxSubtotalType()
@@ -549,6 +767,8 @@
                 throw;
             }
         }
+
+        #endregion
 
     }
 }
