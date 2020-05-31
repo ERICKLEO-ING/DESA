@@ -1,0 +1,11 @@
+D:\DESARROLLO\FACTURACION_ELECTRONICA\SOURCE\EASYFACT\ErickOrlando.FirmadoSunat\bin\Debug\ErickOrlando.FirmadoSunat.dll.config
+D:\DESARROLLO\FACTURACION_ELECTRONICA\SOURCE\EASYFACT\ErickOrlando.FirmadoSunat\bin\Debug\ErickOrlando.FirmadoSunat.dll
+D:\DESARROLLO\FACTURACION_ELECTRONICA\SOURCE\EASYFACT\ErickOrlando.FirmadoSunat\bin\Debug\ErickOrlando.FirmadoSunat.pdb
+D:\DESARROLLO\FACTURACION_ELECTRONICA\SOURCE\EASYFACT\ErickOrlando.FirmadoSunat\bin\Debug\Ionic.Zip.dll
+D:\DESARROLLO\FACTURACION_ELECTRONICA\SOURCE\EASYFACT\ErickOrlando.FirmadoSunat\bin\Debug\Microsoft.Web.Services3.dll
+D:\DESARROLLO\FACTURACION_ELECTRONICA\SOURCE\EASYFACT\ErickOrlando.FirmadoSunat\bin\Debug\Ionic.Zip.xml
+D:\DESARROLLO\FACTURACION_ELECTRONICA\SOURCE\EASYFACT\ErickOrlando.FirmadoSunat\obj\Debug\ErickOrlando.FirmadoSunat.csprojAssemblyReference.cache
+D:\DESARROLLO\FACTURACION_ELECTRONICA\SOURCE\EASYFACT\ErickOrlando.FirmadoSunat\obj\Debug\ErickOrlando.FirmadoSunat.csproj.CoreCompileInputs.cache
+D:\DESARROLLO\FACTURACION_ELECTRONICA\SOURCE\EASYFACT\ErickOrlando.FirmadoSunat\obj\Debug\ErickOrlando.FirmadoSunat.csproj.CopyComplete
+D:\DESARROLLO\FACTURACION_ELECTRONICA\SOURCE\EASYFACT\ErickOrlando.FirmadoSunat\obj\Debug\ErickOrlando.FirmadoSunat.dll
+D:\DESARROLLO\FACTURACION_ELECTRONICA\SOURCE\EASYFACT\ErickOrlando.FirmadoSunat\obj\Debug\ErickOrlando.FirmadoSunat.pdb

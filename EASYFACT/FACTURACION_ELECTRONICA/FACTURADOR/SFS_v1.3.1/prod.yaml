@@ -1,0 +1,50 @@
+server:
+  applicationConnectors:
+    - type: http
+      port: 9000
+  adminConnectors:
+    - type: http
+      port: 18081
+  requestLog:
+    appenders:
+      - type: console
+
+logging:
+  level: INFO 
+  loggers:
+    io.dropwizard: WARN
+    org.eclipse: WARN
+    org.jboss.weld.Version: INFO
+    org.jboss.weld: WARN
+    io.dropwizard.jersey.DropwizardResourceConfig: ERROR
+    io.dropwizard.server.ServerFactory: INFO
+    sistema.facturador: ERROR
+    org.jsr107.ri.annotations.cdi: INFO
+  appenders:
+    - type: console
+    - type: file
+      currentLogFilename: ./facturador.log
+      archivedLogFilenamePattern: ./facturador-%d.log
+xsltCpePath:
+  boleta: commons/xsl/validation/2.X/ValidaExprRegBoleta-2.0.1.xsl
+  factura: commons/xsl/validation/2.X/ValidaExprRegFactura-2.0.1.xsl
+  notaCredito: commons/xsl/validation/2.X/ValidaExprRegNC-2.0.1.xsl
+  notaDebito: commons/xsl/validation/2.X/ValidaExprRegND-2.0.1.xsl
+  servicioPublico: commons/xsl/validation/1.X/ValidaExprRegServicioPublico-2.0.0.xsl
+  guia: commons/xsl/validation/2.X/ValidaExprRegGuiaRemitente-2.0.1.xsl
+  percepcion: commons/xsl/validation/1.X/ValidaExprRegPercepcion-1.0.1.xsl
+  retencion: commons/xsl/validation/1.X/ValidaExprRegRetencion-1.0.3.xsl
+  resumenBoleta: commons/xsl/validation/1.X/ValidaExprRegSummary-1.1.0.xsl
+  resumenAnulado: commons/xsl/validation/1.X/ValidaExprRegSummaryVoided-1.0.1.xsl
+  resumenReversion: commons/xsl/validation/1.X/ValidaExprRegOtrosVoided-1.0.1.xsl
+  boletaXsd: commons/xsd/2.1/maindoc/UBL-Invoice-2.1.xsd
+  facturaXsd: commons/xsd/2.1/maindoc/UBL-Invoice-2.1.xsd
+  notaCreditoXsd: commons/xsd/2.1/maindoc/UBL-CreditNote-2.1.xsd
+  notaDebitoXsd: commons/xsd/2.1/maindoc/UBL-DebitNote-2.1.xsd
+  guiaXsd: commons/xsd/2.1/maindoc/UBL-DespatchAdvice-2.1.xsd
+  percepcionXsd: commons/xsd/2.0/main/UBLPE-Perception-1.0.xsd
+  retencionXsd: commons/xsd/2.0/main/UBLPE-Retention-1.0.xsd
+  resumenBoletaXsd: commons/xsd/2.0/main/UBLPE-SummaryDocuments-1.0.xsd
+  resumenAnuladoXsd: commons/xsd/2.0/main/UBLPE-VoidedDocuments-1.0.xsd
+  resumenReversionXsd: commons/xsd/2.0/main/UBLPE-VoidedDocuments-1.0.xsd
+  plazoBoleta: 5

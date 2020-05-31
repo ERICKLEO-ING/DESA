@@ -1,0 +1,89 @@
+INFO  [2020-02-20 04:00:29,536] io.dropwizard.server.ServerFactory: Starting FacturadorApplication
+--------------------------------------------------------------------------------------------------
+
+  _____     _        ____   _____    _   _    ____        _      ____      U  ___ u   ____     
+ |" ___|U  /"\  u U /"___| |_ " _|U |"|u| |U |  _"\ u U  /"\  u |  _"\      \/"_ \/U |  _"\ u  
+U| |_  u \/ _ \/  \| | u     | |   \| |\| | \| |_) |/  \/ _ \/ /| | | |     | | | | \| |_) |/  
+\|  _|/  / ___ \   | |/__   /| |\   | |_| |  |  _ <    / ___ \ U| |_| |\.-,_| |_| |  |  _ <    
+ |_|    /_/   \_\   \____| u |_|U  <<\___/   |_| \_\  /_/   \_\ |____/ u \_)-\___/   |_| \_\   
+ )(\\,-  \\    >>  _// \\  _// \\_(__) )(    //   \\_  \\    >>  |||_         \\     //   \\_  
+(__)(_/ (__)  (__)(__)(__)(__) (__)   (__)  (__)  (__)(__)  (__)(__)_)       (__)   (__)  (__) 
+
+                                                                            Sistema facturador
+
+--------------------------------------------------------------------------------------------------
+
+INFO  [2020-02-20 04:00:29,801] org.jboss.weld.Version: WELD-000900: 2.4.1 (Final)
+INFO  [2020-02-20 04:00:29,950] org.apache.deltaspike.core.util.ProjectStageProducer: Computed the following DeltaSpike ProjectStage: Production
+WARN  [2020-02-20 04:01:19,106] org.glassfish.jersey.internal.Errors: The following warnings have been detected: WARNING: Parameter 1 of type javax.enterprise.context.spi.CreationalContext<T> from public void org.apache.deltaspike.core.util.context.ContextualInstanceInfo.setCreationalContext(javax.enterprise.context.spi.CreationalContext<T>) is not resolvable to a concrete type.
+WARNING: Parameter 1 of type T from public void org.apache.deltaspike.core.util.context.ContextualInstanceInfo.setContextualInstance(T) is not resolvable to a concrete type.
+
+INFO  [2020-02-20 04:01:19,229] org.quartz.impl.StdSchedulerFactory: Using default implementation for ThreadExecutor
+INFO  [2020-02-20 04:01:19,247] org.quartz.core.SchedulerSignalerImpl: Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+INFO  [2020-02-20 04:01:19,248] org.quartz.core.QuartzScheduler: Quartz Scheduler v.2.2.1 created.
+INFO  [2020-02-20 04:01:19,249] org.quartz.core.QuartzScheduler: JobFactory set to: org.apache.deltaspike.scheduler.impl.CdiAwareJobFactory@82a55e
+INFO  [2020-02-20 04:01:19,250] org.quartz.simpl.RAMJobStore: RAMJobStore initialized.
+INFO  [2020-02-20 04:01:19,250] org.quartz.core.QuartzScheduler: Scheduler meta-data: Quartz Scheduler (v2.2.1) 'MyScheduler' with instanceId '1'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 3 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+INFO  [2020-02-20 04:01:19,250] org.quartz.impl.StdSchedulerFactory: Quartz scheduler 'MyScheduler' initialized from an externally provided properties instance.
+INFO  [2020-02-20 04:01:19,250] org.quartz.impl.StdSchedulerFactory: Quartz scheduler version: 2.2.1
+INFO  [2020-02-20 04:01:19,252] org.mybatis.cdi.Extension: MyBatis CDI Module - Activated
+INFO  [2020-02-20 04:01:19,252] org.mybatis.cdi.Extension: MyBatis CDI Module - Mapper dependency discovered: sistema.facturador.mybatis.mappers.ErrorMap
+INFO  [2020-02-20 04:01:19,252] org.mybatis.cdi.Extension: MyBatis CDI Module - Mapper dependency discovered: sistema.facturador.mybatis.mappers.ParametroMap
+INFO  [2020-02-20 04:01:19,252] org.mybatis.cdi.Extension: MyBatis CDI Module - Mapper dependency discovered: sistema.facturador.mybatis.mappers.DocumentoMap
+WARN  [2020-02-20 04:01:19,298] org.jboss.weld.Validator: WELD-001473: javax.enterprise.inject.spi.Bean implementation org.apache.cxf.cdi.CdiBusBean@1cb6b6d declared a normal scope but does not implement javax.enterprise.inject.spi.PassivationCapable. It won't be possible to inject this bean into a bean with a passivating scope (@SessionScoped, @ConversationScoped). This can be fixed by assigning the Bean implementation a unique id by implementing the PassivationCapable interface.
+INFO  [2020-02-20 04:01:19,619] org.apache.cxf.wsdl.service.factory.ReflectionServiceFactoryBean: Creating Service {http://gencdp.soap.facturador.sistema/}TransferirArchivoSoapService from class sistema.facturador.soap.gencdp.TransferirArchivoSoap
+INFO  [2020-02-20 04:01:20,129] org.apache.cxf.endpoint.ServerImpl: Setting the server's publish address to be /TransferirArchivoSoap
+INFO  [2020-02-20 04:01:20,252] org.quartz.core.QuartzScheduler: Scheduler MyScheduler_$_1 started.
+ERROR [2020-02-20 04:03:20,149] sistema.facturador.resources.LoadPageResource: Finalizando Procesamiento
+ERROR [2020-02-20 04:08:43,065] sistema.facturador.resources.LoadPageResource: Finalizando Procesamiento
+INFO  [2020-02-20 04:12:16,874] io.dropwizard.server.ServerFactory: Starting FacturadorApplication
+--------------------------------------------------------------------------------------------------
+
+  _____     _        ____   _____    _   _    ____        _      ____      U  ___ u   ____     
+ |" ___|U  /"\  u U /"___| |_ " _|U |"|u| |U |  _"\ u U  /"\  u |  _"\      \/"_ \/U |  _"\ u  
+U| |_  u \/ _ \/  \| | u     | |   \| |\| | \| |_) |/  \/ _ \/ /| | | |     | | | | \| |_) |/  
+\|  _|/  / ___ \   | |/__   /| |\   | |_| |  |  _ <    / ___ \ U| |_| |\.-,_| |_| |  |  _ <    
+ |_|    /_/   \_\   \____| u |_|U  <<\___/   |_| \_\  /_/   \_\ |____/ u \_)-\___/   |_| \_\   
+ )(\\,-  \\    >>  _// \\  _// \\_(__) )(    //   \\_  \\    >>  |||_         \\     //   \\_  
+(__)(_/ (__)  (__)(__)(__)(__) (__)   (__)  (__)  (__)(__)  (__)(__)_)       (__)   (__)  (__) 
+
+                                                                            Sistema facturador
+
+--------------------------------------------------------------------------------------------------
+
+INFO  [2020-02-20 04:12:16,958] org.jboss.weld.Version: WELD-000900: 2.4.1 (Final)
+INFO  [2020-02-20 04:12:16,981] org.apache.deltaspike.core.util.ProjectStageProducer: Computed the following DeltaSpike ProjectStage: Production
+WARN  [2020-02-20 04:13:07,293] org.glassfish.jersey.internal.Errors: The following warnings have been detected: WARNING: Parameter 1 of type T from public void org.apache.deltaspike.core.util.context.ContextualInstanceInfo.setContextualInstance(T) is not resolvable to a concrete type.
+WARNING: Parameter 1 of type javax.enterprise.context.spi.CreationalContext<T> from public void org.apache.deltaspike.core.util.context.ContextualInstanceInfo.setCreationalContext(javax.enterprise.context.spi.CreationalContext<T>) is not resolvable to a concrete type.
+
+INFO  [2020-02-20 04:13:07,364] org.quartz.impl.StdSchedulerFactory: Using default implementation for ThreadExecutor
+INFO  [2020-02-20 04:13:07,375] org.quartz.core.SchedulerSignalerImpl: Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+INFO  [2020-02-20 04:13:07,375] org.quartz.core.QuartzScheduler: Quartz Scheduler v.2.2.1 created.
+INFO  [2020-02-20 04:13:07,377] org.quartz.core.QuartzScheduler: JobFactory set to: org.apache.deltaspike.scheduler.impl.CdiAwareJobFactory@31048
+INFO  [2020-02-20 04:13:07,377] org.quartz.simpl.RAMJobStore: RAMJobStore initialized.
+INFO  [2020-02-20 04:13:07,377] org.quartz.core.QuartzScheduler: Scheduler meta-data: Quartz Scheduler (v2.2.1) 'MyScheduler' with instanceId '1'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 3 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+INFO  [2020-02-20 04:13:07,377] org.quartz.impl.StdSchedulerFactory: Quartz scheduler 'MyScheduler' initialized from an externally provided properties instance.
+INFO  [2020-02-20 04:13:07,377] org.quartz.impl.StdSchedulerFactory: Quartz scheduler version: 2.2.1
+INFO  [2020-02-20 04:13:07,378] org.mybatis.cdi.Extension: MyBatis CDI Module - Activated
+INFO  [2020-02-20 04:13:07,379] org.mybatis.cdi.Extension: MyBatis CDI Module - Mapper dependency discovered: sistema.facturador.mybatis.mappers.ErrorMap
+INFO  [2020-02-20 04:13:07,379] org.mybatis.cdi.Extension: MyBatis CDI Module - Mapper dependency discovered: sistema.facturador.mybatis.mappers.ParametroMap
+INFO  [2020-02-20 04:13:07,379] org.mybatis.cdi.Extension: MyBatis CDI Module - Mapper dependency discovered: sistema.facturador.mybatis.mappers.DocumentoMap
+WARN  [2020-02-20 04:13:07,427] org.jboss.weld.Validator: WELD-001473: javax.enterprise.inject.spi.Bean implementation org.apache.cxf.cdi.CdiBusBean@1871ed6 declared a normal scope but does not implement javax.enterprise.inject.spi.PassivationCapable. It won't be possible to inject this bean into a bean with a passivating scope (@SessionScoped, @ConversationScoped). This can be fixed by assigning the Bean implementation a unique id by implementing the PassivationCapable interface.
+INFO  [2020-02-20 04:13:07,760] org.apache.cxf.wsdl.service.factory.ReflectionServiceFactoryBean: Creating Service {http://gencdp.soap.facturador.sistema/}TransferirArchivoSoapService from class sistema.facturador.soap.gencdp.TransferirArchivoSoap
+INFO  [2020-02-20 04:13:08,379] org.quartz.core.QuartzScheduler: Scheduler MyScheduler_$_1 started.
+INFO  [2020-02-20 04:13:08,497] org.apache.cxf.endpoint.ServerImpl: Setting the server's publish address to be /TransferirArchivoSoap
+ERROR [2020-02-20 04:13:09,433] sistema.facturador.resources.LoadPageResource: Finalizando Procesamiento
