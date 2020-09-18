@@ -7,15 +7,15 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ErickOrlando.FirmadoSunat",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ErickOrlando.FirmadoSunatWin", "ErickOrlando.FirmadoSunatWin\ErickOrlando.FirmadoSunatWin.csproj", "{B837B42F-7123-432A-BC65-79E9DBE475A2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EasyFact", "EasyFact\EasyFact.csproj", "{312CAF25-3E92-4FDF-85CF-108156227F89}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EasyFactWebService", "EasyFactWebService\EasyFactWebService.csproj", "{131C347E-596D-4823-83C3-8C4557822C23}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DOC", "DOC", "{7008E3CA-ED58-48CD-9613-B406A0C1F23C}"
 	ProjectSection(SolutionItems) = preProject
 		JSON.txt = JSON.txt
 		SUNAT_URL.txt = SUNAT_URL.txt
 	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FacturacionElectronica", "FacturacionElectronica\FacturacionElectronica.csproj", "{6623662A-A9BF-4260-8E60-BFF8330F5794}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EasyFact", "EasyFact\EasyFact.csproj", "{312CAF25-3E92-4FDF-85CF-108156227F89}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -31,14 +31,14 @@ Global
 		{B837B42F-7123-432A-BC65-79E9DBE475A2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B837B42F-7123-432A-BC65-79E9DBE475A2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B837B42F-7123-432A-BC65-79E9DBE475A2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6623662A-A9BF-4260-8E60-BFF8330F5794}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6623662A-A9BF-4260-8E60-BFF8330F5794}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6623662A-A9BF-4260-8E60-BFF8330F5794}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6623662A-A9BF-4260-8E60-BFF8330F5794}.Release|Any CPU.Build.0 = Release|Any CPU
 		{312CAF25-3E92-4FDF-85CF-108156227F89}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{312CAF25-3E92-4FDF-85CF-108156227F89}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{312CAF25-3E92-4FDF-85CF-108156227F89}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{312CAF25-3E92-4FDF-85CF-108156227F89}.Release|Any CPU.Build.0 = Release|Any CPU
-		{131C347E-596D-4823-83C3-8C4557822C23}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{131C347E-596D-4823-83C3-8C4557822C23}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{131C347E-596D-4823-83C3-8C4557822C23}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{131C347E-596D-4823-83C3-8C4557822C23}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

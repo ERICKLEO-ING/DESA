@@ -2077,11 +2077,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\DESARROLLO\\ERICK\\InfoBack\\InfoBack.Android\\InfoBack.Android.csproj",
+      "projectUniqueName": "C:\\Users\\ERICK\\Source\\Repos\\DESA\\ERICK\\InfoBack\\InfoBack.Android\\InfoBack.Android.csproj",
       "projectName": "InfoBack.Android",
-      "projectPath": "D:\\DESARROLLO\\ERICK\\InfoBack\\InfoBack.Android\\InfoBack.Android.csproj",
+      "projectPath": "C:\\Users\\ERICK\\Source\\Repos\\DESA\\ERICK\\InfoBack\\InfoBack.Android\\InfoBack.Android.csproj",
       "packagesPath": "C:\\Users\\ERICK\\.nuget\\packages\\",
-      "outputPath": "D:\\DESARROLLO\\ERICK\\InfoBack\\InfoBack.Android\\obj\\",
+      "outputPath": "C:\\Users\\ERICK\\Source\\Repos\\DESA\\ERICK\\InfoBack\\InfoBack.Android\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
@@ -2102,8 +2102,8 @@
       "frameworks": {
         "monoandroid90": {
           "projectReferences": {
-            "D:\\DESARROLLO\\ERICK\\InfoBack\\InfoBack\\InfoBack.csproj": {
-              "projectPath": "D:\\DESARROLLO\\ERICK\\InfoBack\\InfoBack\\InfoBack.csproj"
+            "C:\\Users\\ERICK\\Source\\Repos\\DESA\\ERICK\\InfoBack\\InfoBack\\InfoBack.csproj": {
+              "projectPath": "C:\\Users\\ERICK\\Source\\Repos\\DESA\\ERICK\\InfoBack\\InfoBack\\InfoBack.csproj"
             }
           }
         }

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "3fA+ubJGp6e+Q2fyMGVutGhnTwPq2Ex/wqtWtd86fG+Pr3HRDvyWp24DEJrKsoxG2Wx8WduLZd66CGJkvXsdIA==",
+  "dgSpecHash": "Yp7Cg68sZEXNgpdG2yFwZ/R9httGvbG9LlJ2ulzjRCYl+WfYOT9oAOKpbbucYDKDo4xZEBeHjKS7vmehzOTa2A==",
   "success": true,
-  "projectFilePath": "C:\\Users\\ERICK\\Source\\Repos\\ERICKLEO-ING\\DESA\\ERICK\\Infomatica\\Infomatica.csproj",
+  "projectFilePath": "C:\\Users\\ERICK\\Source\\Repos\\DESA\\ERICK\\Infomatica\\Infomatica.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ERICK\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "C:\\Users\\ERICK\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",

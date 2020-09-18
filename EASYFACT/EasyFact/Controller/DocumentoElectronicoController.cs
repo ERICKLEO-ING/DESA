@@ -3,9 +3,7 @@
     using System;
     using System.Collections.Generic;
     using System.IO;
-    using System.Linq;
     using System.Text;
-    using System.Threading.Tasks;
     using System.Xml;
     using System.Xml.Serialization;
     using EasyFact.Constantes;
@@ -17,50 +15,24 @@
         public List<string> RecibeDocumentoElectronio(DocumentoElectronicoModel DocElec)
         {
             List<string> Respuesta;
-            try
-            {
-                // InvoiceLine(DocElec.Trama.ITEM, "PEN");
-                //Respuesta = ValidaTramaEN(DocElec.Trama.EN);
-                Respuesta = GeneraDocumentoXML(DocElec);
+            Respuesta = GeneraDocumentoXML(DocElec);
 
-                return Respuesta;
-            }
-            catch (Exception)
-            {
-                throw;
-            }
+            return Respuesta;
         }
         #region ValidacionesInvoice
-        private List<String> ValidaTramaEN(string EN)
-        {
-            List<string> Respuesta = new List<string>();
-            try
-            {
-                string[] Cabecera = EN.Split('|');
-
-
-                return Respuesta;
-            }
-            catch (Exception)
-            {
-
-                throw;
-            }
-        }
+        
 
         #endregion
 
         #region GeneracionXML
         private List<String> GeneraDocumentoXML(DocumentoElectronicoModel Doc)
         {
-            try
-            {
-                string[] Cabecera = Doc.Trama.EN.Split('|');
+            //string[] Cabecera = Doc.Trama.EN.Split('|');
 
-                XmlDocument xmlDoc = new XmlDocument();
-                XmlElement xmlElement = xmlDoc.CreateElement("AdditionalInformation", "urn:sunat:names:specification:ubl:peru:schema:xsd:SunatAggregateComponents-1");
-                UBLExtensionType[] uBLExtensions = new UBLExtensionType[]
-                {
+            XmlDocument xmlDoc = new XmlDocument();
+            XmlElement xmlElement = xmlDoc.CreateElement("AdditionalInformation", "urn:sunat:names:specification:ubl:peru:schema:xsd:SunatAggregateComponents-1");
+            UBLExtensionType[] uBLExtensions = new UBLExtensionType[]
+            {
                     new UBLExtensionType
                     {
                         ExtensionContent = xmlElement
@@ -69,86 +41,81 @@
                     {
                         ExtensionContent = xmlElement
                     },
-                };
+            };
 
-                Invoice Factura_Boleta = new Invoice();
+            Invoice Factura_Boleta = new Invoice();
+            {
+                Factura_Boleta.UBLExtensions = uBLExtensions;
+                Factura_Boleta.UBLVersionID = new UBLVersionIDType
                 {
-                    Factura_Boleta.UBLExtensions = uBLExtensions;
-                    Factura_Boleta.UBLVersionID = new UBLVersionIDType
-                    {
-                        Value = "2.1"
-                    };
-                    Factura_Boleta.ID = new IDType
-                    {
-                        Value = "F001-1"
-                    };
-                    Factura_Boleta.CustomizationID = new CustomizationIDType
-                    {
-                        Value = "2.0"
-                    };
-                    Factura_Boleta.IssueDate = new IssueDateType
-                    {
-                        Value = Convert.ToDateTime("2017-05-14 15:42:20")
-                    };
-                    Factura_Boleta.IssueTime = new IssueTimeType
-                    {
-                        Value = Convert.ToDateTime("2017-05-14 15:42:20"),
-                    };
-                    Factura_Boleta.DueDate = new DueDateType
-                    {
-                        Value = Convert.ToDateTime("2017-05-15 15:42:20"),
-                    };
-                    Factura_Boleta.InvoiceTypeCode = new InvoiceTypeCodeType
-                    {
-                        Value = "01"
-                    };
-                    Factura_Boleta.Note = new List<NoteType>
+                    Value = "2.1"
+                };
+                Factura_Boleta.ID = new IDType
+                {
+                    Value = "F001-1"
+                };
+                Factura_Boleta.CustomizationID = new CustomizationIDType
+                {
+                    Value = "2.0"
+                };
+                Factura_Boleta.IssueDate = new IssueDateType
+                {
+                    Value = Convert.ToDateTime("2017-05-14 15:42:20")
+                };
+                Factura_Boleta.IssueTime = new IssueTimeType
+                {
+                    Value = Convert.ToDateTime("2017-05-14 15:42:20"),
+                };
+                Factura_Boleta.DueDate = new DueDateType
+                {
+                    Value = Convert.ToDateTime("2017-05-15 15:42:20"),
+                };
+                Factura_Boleta.InvoiceTypeCode = new InvoiceTypeCodeType
+                {
+                    Value = "01"
+                };
+                Factura_Boleta.Note = new List<NoteType>
                     {
                         new NoteType { Value = "SETENTA Y UN MIL TRESCIENTOS CINCUENTICUATRO Y 99/100" }
                     }.ToArray();
-                    Factura_Boleta.DocumentCurrencyCode = new DocumentCurrencyCodeType
-                    {
-                        Value = "PEN"
-                    };
-                    Factura_Boleta.LineCountNumeric = new LineCountNumericType
-                    {
-                        Value = 1
-                    };
-                    Factura_Boleta.ProfileID = new ProfileIDType
-                    {
-                        Value = "0101"
-                    };
-                    Factura_Boleta.OrderReference = new OrderReferenceType
-                    {
-                        ID = new IDType()
-                        {
-                            Value="XXXXX"
-                        }
-                    };
-
-                    Factura_Boleta.Signature = SignatureTypes(Doc.Trama);
-                    Factura_Boleta.AccountingSupplierParty = SupplierPartyType(Doc.Trama);
-                    Factura_Boleta.AccountingCustomerParty = CustomerPartyType(Doc.Trama);
-                    Factura_Boleta.AllowanceCharge = AllowanceChargeTypes();
-                    Factura_Boleta.TaxTotal = TaxTotalType(Doc.Trama);
-                    Factura_Boleta.LegalMonetaryTotal = MonetaryTotal(Doc.Trama);
-                    Factura_Boleta.InvoiceLine = InvoiceLine(Doc.Trama.ITEM);
-                }
-
-                XmlSerializer xmlSerializer = new XmlSerializer(typeof(Invoice));
-
-                using (Stream stream = new FileStream(@"D:\" + Doc.Ruc + "-" + Doc.Local + "-" + Doc.TipoDocumento + "-" + Doc.NumDocumento + ".xml", FileMode.Create))
-                using (XmlWriter xmlWriter = new XmlTextWriter(stream, Encoding.Unicode))
+                Factura_Boleta.DocumentCurrencyCode = new DocumentCurrencyCodeType
                 {
-                    xmlSerializer.Serialize(xmlWriter, Factura_Boleta);
-                }
+                    Value = "PEN"
+                };
+                Factura_Boleta.LineCountNumeric = new LineCountNumericType
+                {
+                    Value = 1
+                };
+                Factura_Boleta.ProfileID = new ProfileIDType
+                {
+                    Value = "0101"
+                };
+                Factura_Boleta.OrderReference = new OrderReferenceType
+                {
+                    ID = new IDType()
+                    {
+                        Value = "XXXXX"
+                    }
+                };
 
-                return new List<string>();
+                Factura_Boleta.Signature = SignatureTypes(Doc.Trama);
+                Factura_Boleta.AccountingSupplierParty = SupplierPartyType(Doc.Trama);
+                Factura_Boleta.AccountingCustomerParty = CustomerPartyType(Doc.Trama);
+                Factura_Boleta.AllowanceCharge = AllowanceChargeTypes();
+                Factura_Boleta.TaxTotal = TaxTotalType(Doc.Trama);
+                Factura_Boleta.LegalMonetaryTotal = MonetaryTotal(Doc.Trama);
+                Factura_Boleta.InvoiceLine = InvoiceLine(Doc.Trama.ITEM);
             }
-            catch (Exception ex)
+
+            XmlSerializer xmlSerializer = new XmlSerializer(typeof(Invoice));
+
+            using (Stream stream = new FileStream(@"D:\" + Doc.Ruc + "-" + Doc.Local + "-" + Doc.TipoDocumento + "-" + Doc.NumDocumento + ".xml", FileMode.Create))
+            using (XmlWriter xmlWriter = new XmlTextWriter(stream, Encoding.Unicode))
             {
-                throw;
+                xmlSerializer.Serialize(xmlWriter, Factura_Boleta);
             }
+
+            return new List<string>();
         }
         #endregion
 
@@ -406,9 +373,9 @@
                     string[] DI = Impuestos.Split('|');
                     TaxTotalType taxTotalType = new TaxTotalType()
                     {
-                        TaxAmount = new TaxAmountType 
-                        { 
-                            currencyID = "PEN", 
+                        TaxAmount = new TaxAmountType
+                        {
+                            currencyID = "PEN",
                             Value = Convert.ToDecimal(DI[1].ToString())
                         },
                         TaxSubtotal = new TaxSubtotalType[]
@@ -427,12 +394,12 @@
                                 TaxCategory = new TaxCategoryType
                                 {
                                     ID= new IDType
-                                    { 
-                                        Value="S" 
+                                    {
+                                        Value="S"
                                     },
                                     TierRange= new TierRangeType
-                                    { 
-                                        Value="S" 
+                                    {
+                                        Value="S"
                                     },
                                     TaxExemptionReasonCode= new TaxExemptionReasonCodeType
                                     {
@@ -441,16 +408,16 @@
                                     TaxScheme = new TaxSchemeType
                                     {
                                         ID= new IDType
-                                        { 
-                                            Value=DI[3].ToString() 
+                                        {
+                                            Value=DI[3].ToString()
                                         },
                                         Name= new NameType1
-                                        { 
-                                            Value=DI[4].ToString() 
+                                        {
+                                            Value=DI[4].ToString()
                                         },
                                         TaxTypeCode= new TaxTypeCodeType
-                                        { 
-                                            Value=DI[5].ToString() 
+                                        {
+                                            Value=DI[5].ToString()
                                         }
                                     }
                                 },

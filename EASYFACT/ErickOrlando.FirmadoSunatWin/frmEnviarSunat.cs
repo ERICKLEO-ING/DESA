@@ -9,10 +9,8 @@ using System.Xml;
 using System.Xml.Linq;
 using System.Xml.Schema;
 using System.Xml.Serialization;
-using System.Xml.XPath;
 using EasyFact.Models;
 using ErickOrlando.FirmadoSunat;
-//using ErickOrlando.FirmadoSunat.Estructuras;
 using ErickOrlando.FirmadoSunatWin.Properties;
 using Ionic.Zip;
 
@@ -197,11 +195,8 @@ namespace ErickOrlando.FirmadoSunatWin
 
         private void button1_Click(object sender, EventArgs e)
         {
-
-            try
+            SignatureType[] signatureCac = new SignatureType[]
             {
-                SignatureType[] signatureCac = new SignatureType[]
-                {
                     new SignatureType()
                 {
                     ID = new IDType { Value= "LlamaSign" },
@@ -234,15 +229,15 @@ namespace ErickOrlando.FirmadoSunatWin
                         }
                     }
                 }
-                };
+            };
 
 
-                SupplierPartyType accountingSupplierParty = new SupplierPartyType()
+            SupplierPartyType accountingSupplierParty = new SupplierPartyType()
+            {
+                Party = new PartyType
                 {
-                    Party = new PartyType
+                    PartyLegalEntity = new PartyLegalEntityType[]
                     {
-                        PartyLegalEntity = new PartyLegalEntityType[]
-                        {
                             new PartyLegalEntityType
                             {
                                 RegistrationName = new RegistrationNameType
@@ -250,42 +245,42 @@ namespace ErickOrlando.FirmadoSunatWin
                                     Value="LLAMA.PE SA"
                                 },
                             }
-                        },
-                        PartyName = new PartyNameType[]
-                        {
+                    },
+                    PartyName = new PartyNameType[]
+                    {
                             new PartyNameType
                             {
                                 Name = new NameType1{Value="LLAMA.PE SA"}
                             }
+                    },
+                    PostalAddress = new AddressType
+                    {
+                        ID = new IDType { Value = "0001" },
+                        District = new DistrictType { Value = "a" },
+                        CityName = new CityNameType { Value = "a" },
+                        StreetName = new StreetNameType { Value = "" },
+                        CitySubdivisionName = new CitySubdivisionNameType { Value = "" },
+                        Country = new CountryType
+                        {
+                            IdentificationCode = new IdentificationCodeType { Value = "aaa" }
                         },
-                        PostalAddress = new AddressType
-                        {
-                            ID = new IDType { Value = "0001" },
-                            District = new DistrictType { Value = "a" },
-                            CityName = new CityNameType { Value = "a" },
-                            StreetName = new StreetNameType { Value = "" },
-                            CitySubdivisionName = new CitySubdivisionNameType { Value = "" },
-                            Country = new CountryType
-                            {
-                                IdentificationCode = new IdentificationCodeType { Value = "aaa" }
-                            },
-                            CountrySubentity = new CountrySubentityType { Value = "" },
+                        CountrySubentity = new CountrySubentityType { Value = "" },
 
-                        }
-                    },
-                    AdditionalAccountID = new AdditionalAccountIDType[]
-                    {
-                        new AdditionalAccountIDType{ Value="20553510661"}
-                    },
-                    CustomerAssignedAccountID = new CustomerAssignedAccountIDType { Value = "20553510661" }
-                };
-
-                CustomerPartyType accountingCustomerParty = new CustomerPartyType()
+                    }
+                },
+                AdditionalAccountID = new AdditionalAccountIDType[]
                 {
-                    Party = new PartyType
+                        new AdditionalAccountIDType{ Value="20553510661"}
+                },
+                CustomerAssignedAccountID = new CustomerAssignedAccountIDType { Value = "20553510661" }
+            };
+
+            CustomerPartyType accountingCustomerParty = new CustomerPartyType()
+            {
+                Party = new PartyType
+                {
+                    PartyLegalEntity = new PartyLegalEntityType[]
                     {
-                        PartyLegalEntity = new PartyLegalEntityType[]
-                        {
                             new PartyLegalEntityType
                             {
                                 RegistrationName = new RegistrationNameType
@@ -293,37 +288,37 @@ namespace ErickOrlando.FirmadoSunatWin
                                     Value="TU CLIENTE SAC",
                                 }
                             }
-                        },
-                        PartyName = new PartyNameType[]
-                        {
+                    },
+                    PartyName = new PartyNameType[]
+                    {
                             new PartyNameType
                             {
                                 Name = new NameType1{Value="LLAMA.PE S.A."}
                             }
-                        },
-                        PostalAddress = new AddressType
-                        {
-                            ID = new IDType { Value = "0001" },
-                            District = new DistrictType { Value = "a" },
-                            CityName = new CityNameType { Value = "a" },
-                            StreetName = new StreetNameType { Value = "" },
-                            CitySubdivisionName = new CitySubdivisionNameType { Value = "" },
-                            Country = new CountryType
-                            {
-                                IdentificationCode = new IdentificationCodeType { Value = "aaa" }
-                            },
-                            CountrySubentity = new CountrySubentityType { Value = "" },
-
-                        }
                     },
-                    AdditionalAccountID = new AdditionalAccountIDType[]
+                    PostalAddress = new AddressType
                     {
+                        ID = new IDType { Value = "0001" },
+                        District = new DistrictType { Value = "a" },
+                        CityName = new CityNameType { Value = "a" },
+                        StreetName = new StreetNameType { Value = "" },
+                        CitySubdivisionName = new CitySubdivisionNameType { Value = "" },
+                        Country = new CountryType
+                        {
+                            IdentificationCode = new IdentificationCodeType { Value = "aaa" }
+                        },
+                        CountrySubentity = new CountrySubentityType { Value = "" },
+
+                    }
+                },
+                AdditionalAccountID = new AdditionalAccountIDType[]
+                {
                         new AdditionalAccountIDType{ Value="20000000001"}
-                    },
-                    CustomerAssignedAccountID = new CustomerAssignedAccountIDType { Value = "20000000001" }
-                };
-                //AccountingCustomerParty 
-                List<TaxTotalType> taxTotal = new List<TaxTotalType>()
+                },
+                CustomerAssignedAccountID = new CustomerAssignedAccountIDType { Value = "20000000001" }
+            };
+            //AccountingCustomerParty 
+            List<TaxTotalType> taxTotal = new List<TaxTotalType>()
                 {
                     new TaxTotalType()
                     {
@@ -355,16 +350,16 @@ namespace ErickOrlando.FirmadoSunatWin
 
                 }
                 };
-                MonetaryTotalType legalMonetaryTotal = new MonetaryTotalType()
-                {
-                    PayableAmount = new PayableAmountType { currencyID = "PEN", Value = 15485 },
-                    AllowanceTotalAmount = new AllowanceTotalAmountType { currencyID = "PEN", Value = 15424 },
-                    ChargeTotalAmount = new ChargeTotalAmountType { currencyID = "PEN", Value = 5555 }
-                };
-                XmlDocument xmlDoc = new XmlDocument();
-                XmlElement xmlElement = xmlDoc.CreateElement("AdditionalInformation", "urn:sunat:names:specification:ubl:peru:schema:xsd:SunatAggregateComponents-1");
-                UBLExtensionType[] uBLExtensions = new UBLExtensionType[]
-                {
+            MonetaryTotalType legalMonetaryTotal = new MonetaryTotalType()
+            {
+                PayableAmount = new PayableAmountType { currencyID = "PEN", Value = 15485 },
+                AllowanceTotalAmount = new AllowanceTotalAmountType { currencyID = "PEN", Value = 15424 },
+                ChargeTotalAmount = new ChargeTotalAmountType { currencyID = "PEN", Value = 5555 }
+            };
+            XmlDocument xmlDoc = new XmlDocument();
+            XmlElement xmlElement = xmlDoc.CreateElement("AdditionalInformation", "urn:sunat:names:specification:ubl:peru:schema:xsd:SunatAggregateComponents-1");
+            UBLExtensionType[] uBLExtensions = new UBLExtensionType[]
+            {
                     new UBLExtensionType
                     {
                         ExtensionContent = xmlElement
@@ -373,85 +368,87 @@ namespace ErickOrlando.FirmadoSunatWin
                     {
                         ExtensionContent = xmlElement
                     },
-                    //Extension1 = new UBLExtension { ExtensionContent = new ExtensionContent { AdditionalInformation = new AdditionalInformation { AdditionalMonetaryTotals = new List<AdditionalMonetaryTotal>(), SunatTransaction = new SunatTransaction(), AdditionalProperties = new List<AdditionalProperty>() } } },
-                    //Extension2 = new UBLExtension { ExtensionContent = new ExtensionContent { AdditionalInformation = new AdditionalInformation { AdditionalMonetaryTotals = new List<AdditionalMonetaryTotal>(), SunatTransaction = new SunatTransaction(), AdditionalProperties = new List<AdditionalProperty>() } } },
-                };
+                //Extension1 = new UBLExtension { ExtensionContent = new ExtensionContent { AdditionalInformation = new AdditionalInformation { AdditionalMonetaryTotals = new List<AdditionalMonetaryTotal>(), SunatTransaction = new SunatTransaction(), AdditionalProperties = new List<AdditionalProperty>() } } },
+                //Extension2 = new UBLExtension { ExtensionContent = new ExtensionContent { AdditionalInformation = new AdditionalInformation { AdditionalMonetaryTotals = new List<AdditionalMonetaryTotal>(), SunatTransaction = new SunatTransaction(), AdditionalProperties = new List<AdditionalProperty>() } } },
+            };
 
-                Invoice invoice = new Invoice()
+            Invoice invoice = new Invoice()
+            {
+                UBLExtensions = uBLExtensions,
+                UBLVersionID = new UBLVersionIDType
                 {
-                    UBLExtensions = uBLExtensions,
-                    UBLVersionID = new UBLVersionIDType
+                    Value = "2.1"
+                },
+                ID = new IDType
+                {
+                    Value = "F001-1"
+                },
+                CustomizationID = new CustomizationIDType
+                {
+                    Value = "2.0"
+                },
+                IssueDate = new IssueDateType
+                {
+                    Value = Convert.ToDateTime("2017-05-14 15:42:20")
+                },
+                IssueTime = new IssueTimeType
+                {
+                    Value = Convert.ToDateTime("2017-05-14 15:42:20"),
+                },
+                DueDate = new DueDateType
+                {
+                    Value = Convert.ToDateTime("2017-05-15 15:42:20"),
+                },
+                InvoiceTypeCode = new InvoiceTypeCodeType
+                {
+                    Value = "01"
+                },
+                Note = new List<NoteType>
                     {
-                        Value = "2.1"
-                    },
+                        new NoteType { Value = "SETENTA Y UN MIL TRESCIENTOS CINCUENTICUATRO Y 99/100" }
+                    }.ToArray(),
+                DocumentCurrencyCode = new DocumentCurrencyCodeType
+                {
+                    Value = "PEN"
+                },
+                LineCountNumeric = new LineCountNumericType
+                {
+                    Value = 1
+                },
+                Signature = signatureCac,
+                AccountingSupplierParty = accountingSupplierParty,
+                AccountingCustomerParty = accountingCustomerParty,
+                TaxTotal = taxTotal.ToArray(),
+                LegalMonetaryTotal = legalMonetaryTotal,
+                ProfileID = new ProfileIDType
+                {
+                    Value = "0101"
+                },
+                OrderReference = new OrderReferenceType
+                {
                     ID = new IDType
                     {
-                        Value = "F001-1"
-                    },
-                    CustomizationID = new CustomizationIDType
-                    {
-                        Value = "2.0"
-                    },
-                    IssueDate = new IssueDateType
-                    {
-                        Value = Convert.ToDateTime("2017-05-14 15:42:20")
-                    },
-                    IssueTime = new IssueTimeType
-                    {
-                        Value = Convert.ToDateTime("2017-05-14 15:42:20"),
-                    },
-                    DueDate = new DueDateType
-                    {
-                        Value = Convert.ToDateTime("2017-05-15 15:42:20"),
-                    },
-                    InvoiceTypeCode = new InvoiceTypeCodeType
-                    {
-                        Value = "01"
-                    },
-                    Note = new List<NoteType>
-                    {
-                        new NoteType {Value="SETENTA Y UN MIL TRESCIENTOS CINCUENTICUATRO Y 99/100"}
-                    }.ToArray(),
-                    DocumentCurrencyCode = new DocumentCurrencyCodeType
-                    {
-                        Value = "PEN"
-                    },
-                    LineCountNumeric = new LineCountNumericType
-                    {
-                        Value = 1
-                    },
-                    Signature = signatureCac,
-                    AccountingSupplierParty = accountingSupplierParty,
-                    AccountingCustomerParty = accountingCustomerParty,
-                    TaxTotal = taxTotal.ToArray(),
-                    LegalMonetaryTotal = legalMonetaryTotal,
-                    ProfileID = new ProfileIDType
-                    {
-                        Value = "0101"
+                        Value = ""
                     }
-                };
-
-                //XmlSerializer serializer = new XmlSerializer(typeof(Invoice));
-                //FileStream fStream = File.Open(@"D:\XML.xml", FileMode.Create);
-
-                //XmlWriter xmlWriter = new XmlTextWriter(fStream, Encoding.Unicode);
-
-                //serializer.Serialize(xmlWriter, invoice);
-
-                //fStream.Close();
-
-                XmlSerializer xmlSerializer = new XmlSerializer(typeof(Invoice));
-
-                using (Stream stream = new FileStream(@"D:\XML.xml", FileMode.Create))
-
-                using (XmlWriter xmlWriter = new XmlTextWriter(stream,Encoding.Unicode))
-                {
-                    xmlSerializer.Serialize(xmlWriter, invoice);
                 }
-            }
-            catch (Exception ex)
+            };
+
+            //XmlSerializer serializer = new XmlSerializer(typeof(Invoice));
+            //FileStream fStream = File.Open(@"D:\XML.xml", FileMode.Create);
+
+            //XmlWriter xmlWriter = new XmlTextWriter(fStream, Encoding.Unicode);
+
+            //serializer.Serialize(xmlWriter, invoice);
+
+            //fStream.Close();
+
+            XmlSerializer xmlSerializer = new XmlSerializer(typeof(Invoice));
+
+            using (Stream stream = new FileStream(@"D:\XML.xml", FileMode.Create))
+
+            using (XmlWriter xmlWriter = new XmlTextWriter(stream, Encoding.Unicode))
             {
-                throw;
+                xmlSerializer.Serialize(xmlWriter, invoice);
             }
         }
         public class Utf8StringWriter : StringWriter

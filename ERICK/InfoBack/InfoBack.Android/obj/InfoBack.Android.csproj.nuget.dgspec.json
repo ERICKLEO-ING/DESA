@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ERICK\\Source\\Repos\\ERICKLEO-ING\\DESA\\ERICK\\InfoBack\\InfoBack.Android\\InfoBack.Android.csproj": {}
+    "C:\\Users\\ERICK\\Source\\Repos\\DESA\\ERICK\\InfoBack\\InfoBack.Android\\InfoBack.Android.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ERICK\\Source\\Repos\\ERICKLEO-ING\\DESA\\ERICK\\InfoBack\\InfoBack.Android\\InfoBack.Android.csproj": {
+    "C:\\Users\\ERICK\\Source\\Repos\\DESA\\ERICK\\InfoBack\\InfoBack.Android\\InfoBack.Android.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ERICK\\Source\\Repos\\ERICKLEO-ING\\DESA\\ERICK\\InfoBack\\InfoBack.Android\\InfoBack.Android.csproj",
+        "projectUniqueName": "C:\\Users\\ERICK\\Source\\Repos\\DESA\\ERICK\\InfoBack\\InfoBack.Android\\InfoBack.Android.csproj",
         "projectName": "InfoBack.Android",
-        "projectPath": "C:\\Users\\ERICK\\Source\\Repos\\ERICKLEO-ING\\DESA\\ERICK\\InfoBack\\InfoBack.Android\\InfoBack.Android.csproj",
+        "projectPath": "C:\\Users\\ERICK\\Source\\Repos\\DESA\\ERICK\\InfoBack\\InfoBack.Android\\InfoBack.Android.csproj",
         "packagesPath": "C:\\Users\\ERICK\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ERICK\\Source\\Repos\\ERICKLEO-ING\\DESA\\ERICK\\InfoBack\\InfoBack.Android\\obj\\",
+        "outputPath": "C:\\Users\\ERICK\\Source\\Repos\\DESA\\ERICK\\InfoBack\\InfoBack.Android\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "fallbackFolders": [
@@ -32,8 +32,8 @@
         "frameworks": {
           "monoandroid90": {
             "projectReferences": {
-              "C:\\Users\\ERICK\\Source\\Repos\\ERICKLEO-ING\\DESA\\ERICK\\InfoBack\\InfoBack\\InfoBack.csproj": {
-                "projectPath": "C:\\Users\\ERICK\\Source\\Repos\\ERICKLEO-ING\\DESA\\ERICK\\InfoBack\\InfoBack\\InfoBack.csproj"
+              "C:\\Users\\ERICK\\Source\\Repos\\DESA\\ERICK\\InfoBack\\InfoBack\\InfoBack.csproj": {
+                "projectPath": "C:\\Users\\ERICK\\Source\\Repos\\DESA\\ERICK\\InfoBack\\InfoBack\\InfoBack.csproj"
               }
             }
           }
@@ -58,18 +58,17 @@
         }
       }
     },
-    "C:\\Users\\ERICK\\Source\\Repos\\ERICKLEO-ING\\DESA\\ERICK\\InfoBack\\InfoBack\\InfoBack.csproj": {
+    "C:\\Users\\ERICK\\Source\\Repos\\DESA\\ERICK\\InfoBack\\InfoBack\\InfoBack.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ERICK\\Source\\Repos\\ERICKLEO-ING\\DESA\\ERICK\\InfoBack\\InfoBack\\InfoBack.csproj",
+        "projectUniqueName": "C:\\Users\\ERICK\\Source\\Repos\\DESA\\ERICK\\InfoBack\\InfoBack\\InfoBack.csproj",
         "projectName": "InfoBack",
-        "projectPath": "C:\\Users\\ERICK\\Source\\Repos\\ERICKLEO-ING\\DESA\\ERICK\\InfoBack\\InfoBack\\InfoBack.csproj",
+        "projectPath": "C:\\Users\\ERICK\\Source\\Repos\\DESA\\ERICK\\InfoBack\\InfoBack\\InfoBack.csproj",
         "packagesPath": "C:\\Users\\ERICK\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ERICK\\Source\\Repos\\ERICKLEO-ING\\DESA\\ERICK\\InfoBack\\InfoBack\\obj\\",
+        "outputPath": "C:\\Users\\ERICK\\Source\\Repos\\DESA\\ERICK\\InfoBack\\InfoBack\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\",
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+          "C:\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
           "C:\\Users\\ERICK\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -126,7 +125,7 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
         }
       }
     }

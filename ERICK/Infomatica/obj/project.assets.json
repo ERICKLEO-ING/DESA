@@ -54,11 +54,12 @@
       ]
     },
     "NETStandard.Library/2.0.3": {
-      "sha512": "vxmrJ1Qmg6aXKNT4FEAz/i0rCuf6pCs43LkZIT3IJsKrdxZf5ndmAEQRzyGN7/wLe7HsdG61pw1tJF8Cc1JAMA==",
+      "sha512": "st47PosZSHrjECdjeIzZQbzivYBJFv6P2nv4cj2ypdI204DO+vZ7l5raGMiX4eXMJ53RfOIg+/s4DHVZ54Nu2A==",
       "type": "package",
       "path": "netstandard.library/2.0.3",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "LICENSE.TXT",
         "THIRD-PARTY-NOTICES.TXT",
         "build/netstandard2.0/NETStandard.Library.targets",
@@ -229,21 +230,19 @@
   },
   "packageFolders": {
     "C:\\Users\\ERICK\\.nuget\\packages\\": {},
-    "C:\\Microsoft\\Xamarin\\NuGet\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Microsoft\\Xamarin\\NuGet\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ERICK\\Source\\Repos\\ERICKLEO-ING\\DESA\\ERICK\\Infomatica\\Infomatica.csproj",
+      "projectUniqueName": "C:\\Users\\ERICK\\Source\\Repos\\DESA\\ERICK\\Infomatica\\Infomatica.csproj",
       "projectName": "Infomatica",
-      "projectPath": "C:\\Users\\ERICK\\Source\\Repos\\ERICKLEO-ING\\DESA\\ERICK\\Infomatica\\Infomatica.csproj",
+      "projectPath": "C:\\Users\\ERICK\\Source\\Repos\\DESA\\ERICK\\Infomatica\\Infomatica.csproj",
       "packagesPath": "C:\\Users\\ERICK\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ERICK\\Source\\Repos\\ERICKLEO-ING\\DESA\\ERICK\\Infomatica\\obj\\",
+      "outputPath": "C:\\Users\\ERICK\\Source\\Repos\\DESA\\ERICK\\Infomatica\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Microsoft\\Xamarin\\NuGet\\",
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        "C:\\Microsoft\\Xamarin\\NuGet\\"
       ],
       "configFilePaths": [
         "C:\\Users\\ERICK\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -292,7 +291,7 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
       }
     }
   }

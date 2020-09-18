@@ -62,6 +62,7 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.ServiceModel" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -74,6 +75,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Connected Services\Sunat\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
     <Compile Include="FrmEnviarSunat.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -96,6 +102,27 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="Connected Services\Sunat\billService.wsdl" />
+    <None Include="Connected Services\Sunat\billService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\Sunat\billService1.wsdl" />
+    <None Include="Connected Services\Sunat\billService2.wsdl" />
+    <None Include="Connected Services\Sunat\ErickOrlando.FirmadoSunatWin.Sunat.getStatusResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\Sunat\ErickOrlando.FirmadoSunatWin.Sunat.sendBillResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\Sunat\ErickOrlando.FirmadoSunatWin.Sunat.sendPackResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\Sunat\ErickOrlando.FirmadoSunatWin.Sunat.sendSummaryResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\Sunat\ErickOrlando.FirmadoSunatWin.Sunat.statusResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="DocumentosEjemplo\common\CCTS_CCT_SchemaModule-2.0.xsd">
       <SubType>Designer</SubType>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -176,7 +203,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\EasyFact\EasyFact.csproj">
-      <Project>{312CAF25-3E92-4FDF-85CF-108156227F89}</Project>
+      <Project>{312caf25-3e92-4fdf-85cf-108156227f89}</Project>
       <Name>EasyFact</Name>
     </ProjectReference>
     <ProjectReference Include="..\ErickOrlando.FirmadoSunat\ErickOrlando.FirmadoSunat.csproj">
@@ -185,6 +212,12 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Connected Services\Sunat\configuration91.svcinfo" />
+    <None Include="Connected Services\Sunat\configuration.svcinfo" />
+    <None Include="Connected Services\Sunat\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
     <Content Include="DocumentosEjemplo\BoletaB11.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -223,6 +256,12 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Connected Services\Sunat\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

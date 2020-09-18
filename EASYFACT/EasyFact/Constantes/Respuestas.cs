@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace EasyFact.Constantes
+﻿namespace EasyFact.Constantes
 {
     public static class ErrorGenerico
     {
@@ -56,7 +50,5 @@ namespace EasyFact.Constantes
         public const string CATALOGO07 = "urn:pe:gob:sunat:cpe:see:gem:catalogos:catalogo07";
         public const string CATALOGO16 = "urn:pe:gob:sunat:cpe:see:gem:catalogos:catalogo16";
         public const string UNECE5305 = "UN/ECE 5305";
-        // public const string FormatoNumerico = "###0.#0";
-        //public const string FormatoDecimal_5 = "##0.####0";
     }
 }
