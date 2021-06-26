@@ -1,12 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "Yp7Cg68sZEXNgpdG2yFwZ/R9httGvbG9LlJ2ulzjRCYl+WfYOT9oAOKpbbucYDKDo4xZEBeHjKS7vmehzOTa2A==",
+  "dgSpecHash": "kyMkL+JEcegxRPMas+a5DdbYGQ1X6MhhIqrU6s7mWdHGHVQY0Oughy6Zv78S2BuufKDCODdZuMYjmE7eYO5NcA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\ERICK\\Source\\Repos\\DESA\\ERICK\\Infomatica\\Infomatica.csproj",
+  "projectFilePath": "C:\\Users\\usuario\\Source\\Repos\\ERICKLEO-ING\\DESA\\ERICK\\Infomatica\\Infomatica.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\ERICK\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
-    "C:\\Users\\ERICK\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
-    "C:\\Users\\ERICK\\.nuget\\packages\\system.drawing.common\\4.6.0\\system.drawing.common.4.6.0.nupkg.sha512"
+    "C:\\Users\\usuario\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\usuario\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
+    "C:\\Users\\usuario\\.nuget\\packages\\system.drawing.common\\4.6.0\\system.drawing.common.4.6.0.nupkg.sha512"
   ],
   "logs": []
 }

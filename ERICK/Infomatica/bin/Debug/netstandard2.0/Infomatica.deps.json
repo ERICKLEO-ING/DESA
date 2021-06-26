@@ -48,7 +48,7 @@
     "NETStandard.Library/2.0.3": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-vxmrJ1Qmg6aXKNT4FEAz/i0rCuf6pCs43LkZIT3IJsKrdxZf5ndmAEQRzyGN7/wLe7HsdG61pw1tJF8Cc1JAMA==",
+      "sha512": "sha512-st47PosZSHrjECdjeIzZQbzivYBJFv6P2nv4cj2ypdI204DO+vZ7l5raGMiX4eXMJ53RfOIg+/s4DHVZ54Nu2A==",
       "path": "netstandard.library/2.0.3",
       "hashPath": "netstandard.library.2.0.3.nupkg.sha512"
     },

@@ -14,3 +14,12 @@ D:\DESARROLLO\ERICK\Infomatica\obj\Debug\netstandard2.0\Infomatica.AssemblyInfoI
 D:\DESARROLLO\ERICK\Infomatica\obj\Debug\netstandard2.0\Infomatica.AssemblyInfo.cs
 D:\DESARROLLO\ERICK\Infomatica\obj\Debug\netstandard2.0\Infomatica.dll
 D:\DESARROLLO\ERICK\Infomatica\obj\Debug\netstandard2.0\Infomatica.pdb
+C:\Users\usuario\Source\Repos\ERICKLEO-ING\DESA\ERICK\Infomatica\bin\Debug\netstandard2.0\Infomatica.deps.json
+C:\Users\usuario\Source\Repos\ERICKLEO-ING\DESA\ERICK\Infomatica\bin\Debug\netstandard2.0\Infomatica.dll
+C:\Users\usuario\Source\Repos\ERICKLEO-ING\DESA\ERICK\Infomatica\bin\Debug\netstandard2.0\Infomatica.pdb
+C:\Users\usuario\Source\Repos\ERICKLEO-ING\DESA\ERICK\Infomatica\obj\Debug\netstandard2.0\Infomatica.csproj.AssemblyReference.cache
+C:\Users\usuario\Source\Repos\ERICKLEO-ING\DESA\ERICK\Infomatica\obj\Debug\netstandard2.0\Infomatica.AssemblyInfoInputs.cache
+C:\Users\usuario\Source\Repos\ERICKLEO-ING\DESA\ERICK\Infomatica\obj\Debug\netstandard2.0\Infomatica.AssemblyInfo.cs
+C:\Users\usuario\Source\Repos\ERICKLEO-ING\DESA\ERICK\Infomatica\obj\Debug\netstandard2.0\Infomatica.csproj.CoreCompileInputs.cache
+C:\Users\usuario\Source\Repos\ERICKLEO-ING\DESA\ERICK\Infomatica\obj\Debug\netstandard2.0\Infomatica.dll
+C:\Users\usuario\Source\Repos\ERICKLEO-ING\DESA\ERICK\Infomatica\obj\Debug\netstandard2.0\Infomatica.pdb
