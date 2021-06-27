@@ -8,3 +8,13 @@ C:\Users\usuario\source\repos\ERICKLEO-ING\DESA\ERICK\KDS.Rest\obj\Debug\KDS.Res
 C:\Users\usuario\source\repos\ERICKLEO-ING\DESA\ERICK\KDS.Rest\obj\Debug\KDS.Rest.csproj.CoreCompileInputs.cache
 C:\Users\usuario\source\repos\ERICKLEO-ING\DESA\ERICK\KDS.Rest\obj\Debug\KDS.Rest.exe
 C:\Users\usuario\source\repos\ERICKLEO-ING\DESA\ERICK\KDS.Rest\obj\Debug\KDS.Rest.pdb
+C:\Users\DESA01\Source\Repos\ERICKLEO-ING\DESA\ERICK\KDS.Rest\bin\Debug\KDS.Rest.exe.config
+C:\Users\DESA01\Source\Repos\ERICKLEO-ING\DESA\ERICK\KDS.Rest\bin\Debug\KDS.Rest.exe
+C:\Users\DESA01\Source\Repos\ERICKLEO-ING\DESA\ERICK\KDS.Rest\bin\Debug\KDS.Rest.pdb
+C:\Users\DESA01\Source\Repos\ERICKLEO-ING\DESA\ERICK\KDS.Rest\obj\Debug\KDS.Rest.csproj.AssemblyReference.cache
+C:\Users\DESA01\Source\Repos\ERICKLEO-ING\DESA\ERICK\KDS.Rest\obj\Debug\KDS.Rest.Properties.Resources.resources
+C:\Users\DESA01\Source\Repos\ERICKLEO-ING\DESA\ERICK\KDS.Rest\obj\Debug\KDS.Rest.Views.PrincipalView.resources
+C:\Users\DESA01\Source\Repos\ERICKLEO-ING\DESA\ERICK\KDS.Rest\obj\Debug\KDS.Rest.csproj.GenerateResource.cache
+C:\Users\DESA01\Source\Repos\ERICKLEO-ING\DESA\ERICK\KDS.Rest\obj\Debug\KDS.Rest.csproj.CoreCompileInputs.cache
+C:\Users\DESA01\Source\Repos\ERICKLEO-ING\DESA\ERICK\KDS.Rest\obj\Debug\KDS.Rest.exe
+C:\Users\DESA01\Source\Repos\ERICKLEO-ING\DESA\ERICK\KDS.Rest\obj\Debug\KDS.Rest.pdb

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using KDS.Rest.Views;
 namespace KDS.Rest
 {
     static class Program
@@ -16,7 +16,7 @@ namespace KDS.Rest
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new PrincipalView());
         }
     }
 }

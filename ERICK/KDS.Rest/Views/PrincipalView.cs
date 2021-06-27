@@ -8,13 +8,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace KDS.Rest
+namespace KDS.Rest.Views
 {
-    public partial class Form1 : Form
+    public partial class PrincipalView : Form
     {
-        public Form1()
+        public PrincipalView()
         {
             InitializeComponent();
         }
+
     }
 }
